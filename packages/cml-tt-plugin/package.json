@@ -1,14 +1,13 @@
 {
-  "name": "cml-toutiao-api",
+  "name": "cml-tt-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chameleon-api": "^0.4.6"
-  }
+  "license": "ISC"
 }

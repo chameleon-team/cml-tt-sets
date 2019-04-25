@@ -4,6 +4,10 @@ module.exports = class ToutiaoPlugin {
     let { cmlType, media} = options;
     this.webpackRules = []; // webpack的rules设置  用于当前端特殊文件处理
     this.moduleRules = []; // 文件后缀对应的节点moduleType  
+    this.logLevel = 3;
+    this.originComponentExtList = ['.ttml'];
+    this.runtimeNpmName = 'chameleon-runtime';
+    this.runtimeNeedComponents = true; 
   }
 /**
  * @description 注册插件
@@ -43,7 +47,7 @@ register(compiler) {
      * currentNode 当前节点
      * parentNodeType 父节点的nodeType
      */
-    const {cmlparse,generator,types,traverse} = require('mvvm-template-parser');
+    const {cmlparse,generator,types,traverse} = require('./node_modules/mvvm-template-parser');
     compiler.hook('compile-template', function(currentNode, parentNodeType) {
         let ast = cmlparse(currentNode.source);
         traverse(ast, {
