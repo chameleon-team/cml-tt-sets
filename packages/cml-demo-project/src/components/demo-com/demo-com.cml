@@ -5,9 +5,8 @@
 </template>
 
 <script>
-
 class DemoCom {}
-
+require('../../assets/images/chameleon.png')
 
 export default new DemoCom();
 </script>

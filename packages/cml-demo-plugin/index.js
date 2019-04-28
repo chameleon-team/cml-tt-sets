@@ -44,7 +44,15 @@ register(compiler) {
      * parentNodeType 父节点的nodeType
      */
     compiler.hook('compile-script', function(currentNode, parentNodeType) {
-      // debugger
+      currentNode.output = compiler.amd.amdWrapModule({content:currentNode.source, modId:currentNode.modId});
+    })
+
+    /**
+     * 编译script节点，比如做模块化
+     * currentNode 当前节点
+     * parentNodeType 父节点的nodeType
+     */
+    compiler.hook('compile-asset', function(currentNode, parentNodeType) {
       currentNode.output = compiler.amd.amdWrapModule({content:currentNode.source, modId:currentNode.modId});
     })
 
@@ -166,7 +174,7 @@ register(compiler) {
           })
         }
 
-        if(currentNode.nodeType === 'module' && currentNode.moduleType === 'script') {
+        if(currentNode.nodeType === 'module' && ~['script','asset'].indexOf(currentNode.moduleType)) {
           commonjsContent += currentNode.output;
         }
   

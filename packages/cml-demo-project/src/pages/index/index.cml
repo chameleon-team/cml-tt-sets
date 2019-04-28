@@ -1,13 +1,10 @@
 <template>
-
   <view c-if="{{true}}" class="scroller-wrap">
-    <text>ss</text>
+    <view class="class1"><text>chameleon</text></view>
     <demo-com></demo-com>
   </view>
 
 </template>
-
-
 
 <script>
 
@@ -22,6 +19,13 @@ export default new Index();
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.class1 {
+  width: 100cpx;
+  height: 100cpx;
+  background: url('../../assets/images/chameleon.png') no-repeat;
+  background-size: 100cpx 100cpx;
 }
 
 </style>
