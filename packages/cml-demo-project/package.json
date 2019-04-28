@@ -17,7 +17,6 @@
     "cml-demo-plugin": "1.0.0",
     "cml-demo-runtime": "1.0.0",
     "cml-demo-ui-builtin": "1.0.0"
-
   },
   "main": "chameleon.config.js",
   "devDependencies": {}

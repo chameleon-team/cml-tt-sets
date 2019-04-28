@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "mvvm-babel-generator": "^0.4.0-mvvm.2",
-    "mvvm-template-parser": "^0.4.0-mvvm.2",
+    "mvvm-babel-generator": "0.4.0-mvvm.5",
+    "mvvm-template-parser": "0.4.0-mvvm.5",
     "postcss": "^7.0.14",
-    "chameleon-css-loader" : "0.4.0-mvvm.2",
-    "chameleon-tool-utils" : "0.4.0-mvvm.2"
+    "chameleon-css-loader": "0.4.0-mvvm.5",
+    "chameleon-tool-utils": "0.4.0-mvvm.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
