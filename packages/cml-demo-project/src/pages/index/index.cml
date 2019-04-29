@@ -7,10 +7,12 @@
 </template>
 
 <script>
-
+import cml from 'cml-demo-api';
 class Index  {}
 
 export default new Index();
+
+cml.alert({message: 'chameleon', confirmTitle:'确定'})
 
 </script>
 <style>

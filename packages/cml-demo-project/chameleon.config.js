@@ -16,6 +16,8 @@ cml.config.merge({
     path.join(__dirname,'node_modules/cml-demo-ui-builtin'),
     path.join(__dirname,'node_modules/cml-demo-runtime'),
     path.join(__dirname,'node_modules/cml-demo-api'),
+    path.join(__dirname,'node_modules/cml-demo-ui'),
+    path.join(__dirname,'node_modules/cml-demo-store'),
   ],
   platforms: ["web","weex","wx","alipay","baidu"],
   buildInfo: {

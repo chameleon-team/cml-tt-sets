@@ -1,13 +1,12 @@
 // 引入官方标准interface文件
 <include src="chameleon-api/src/interfaces/alert/index.interface"></include>
 
-// 扩展实现新端（以头条小程序为例，假设端扩展标识为：toutiao）
+// 扩展实现新端
 <script cml-type="demo">
 class Method implements uiInterface {
   alert(opt, successCallBack, failCallBack) {
-    // 根据头条小程序实现alert弹窗
     let { message, confirmTitle} = opt;
-    tt.showModal({
+    wx.showModal({
       showCancel: false,
       title: '',
       content: message,
@@ -23,4 +22,5 @@ class Method implements uiInterface {
 }
 
 export default new Method();
+
 </script>
