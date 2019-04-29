@@ -1,6 +1,5 @@
 const {cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
 
-
 module.exports = function(content) {
   let ast = cmlparse(content);
   traverse(ast, {

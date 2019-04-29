@@ -1,14 +1,14 @@
 {
-  "name": "cml-demo-ui-builtin",
+  "name": "cml-demo-ui",
   "version": "1.0.0",
   "description": "",
+  "main": "/components",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "main": "/components",
   "dependencies": {
-    "chameleon-ui-builtin": "^0.2.2"
+    "cml-ui": "^0.1.8"
   }
 }
