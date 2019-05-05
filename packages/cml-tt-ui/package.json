@@ -1,0 +1,14 @@
+{
+  "name": "cml-tt-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/components",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chameleon-Team",
+  "license": "Apache",
+  "dependencies": {
+    "cml-ui": "^0.2.0-mvvm.1"
+  }
+}

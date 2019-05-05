@@ -1,0 +1,13 @@
+// 引入官方标准interface文件
+<include src="chameleon-api/src/interfaces/alert/index.interface"></include>
+
+// 扩展实现新端
+<script cml-type="tt">
+class Method implements uiInterface {
+  alert(opt, successCallBack, failCallBack) {
+  }
+}
+
+export default new Method();
+
+</script>

@@ -1,18 +1,14 @@
 {
-  "name": "cml-extplatform-demo",
+  "name": "cml-tt-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chameleon-team/cml-tt-sets.git"
-  },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "devDependencies": {
-    "lerna": "^3.5.1"
+  "dependencies": {
+    "chameleon-api": "^0.4.6"
   }
 }
