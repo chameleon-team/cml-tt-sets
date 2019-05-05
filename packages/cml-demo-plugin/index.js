@@ -14,6 +14,15 @@ module.exports = class DemoPlugin {
     this.runtimeNeedComponents = false; 
     this.cmlType = cmlType;
     this.media = media;
+    this.miniappExt = {  // 小程序原生组件处理
+      rule: /\.wxml$/,
+      mapping: {
+        'template': '.wxml',
+        'style': '.wxss',
+        'script': '.js',
+        'json': '.json'
+      }
+    }
   }
 /**
  * @description 注册插件
