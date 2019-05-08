@@ -1,1 +1,18 @@
-<text class="class1">cml中引入的头条原生组件</text>
+<view>
+  <text class="class1">cml中引入的头条原生组件</text>
+
+  <view class="demos">
+    <button class="btn" bindtap="showAlert">Alert & showToast</button>
+    <button class="btn" bindtap="setTitle">setTitle</button>
+    <button class="btn" bindtap="showComfirm">Confirm & showToast</button>
+    <button class="btn" bindtap="chooseImg">chooseImg</button>
+    <button class="btn" bindtap="close">close</button>
+    <button class="btn" bindtap="setTitle1">setTitle</button>
+    <button class="btn" bindtap="animate">animation</button>
+    <button class="btn" bindtap="storage">storage</button>
+    <button class="btn" bindtap="clipBoard">ClipBoard</button>
+  </view>
+
+  <view animation="{{animationData}}"></view>
+
+</view>
