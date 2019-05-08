@@ -10,5 +10,10 @@
   "license": "Apache",
   "dependencies": {
     "chameleon-runtime": "^0.1.5"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "glob": "^7.1.4",
+    "shelljs": "^0.8.3"
   }
 }
