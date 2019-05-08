@@ -1,0 +1,16 @@
+<include src="chameleon-api/src/interfaces/inSDK/index.interface"></include>
+
+<script cml-type="tt">
+
+  class Method implements InSDKInterface {
+    inSDK() {
+      return false
+    }
+  }
+
+  export default new Method();
+</script>
+
+
+
+
