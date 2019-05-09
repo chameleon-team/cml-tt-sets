@@ -8,7 +8,9 @@
 
 <script>
 // import cml from 'cml-tt-api';
-class Index  {}
+class Index  {
+  
+}
 
 export default new Index();
 

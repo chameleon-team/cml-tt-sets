@@ -23,6 +23,11 @@ cml.config.merge({
   buildInfo: {
     wxAppId: '123456'
   },
+  tt: {
+    build: {
+      minimize: true
+    }
+  },
   wx: {
     dev: {
     },
