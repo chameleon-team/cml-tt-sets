@@ -1,7 +1,7 @@
+// import { cpx2px } from 'chameleon-api/src/interfaces/createAnimation/_util';
 import { cpx2px } from '../_util';
-import { isStr, isNum } from '../../../lib/utils';
-import { isNumTypeStyles, rotateStyles } from './common.js';
-
+import { isStr, isNum } from 'chameleon-api/src/lib/utils';
+import { isNumTypeStyles, rotateStyles } from 'chameleon-api/src/interfaces/createAnimation/styleLoader/common.js';
 export const transformLoader = (styles, description) => {
   const returnStyles = {};
 

@@ -1,0 +1,13 @@
+<include src="chameleon-api/src/interfaces/getLaunchOptionsSync/index.interface"></include>
+
+<script cml-type="tt">
+class Method implements launchOptionsInterface {
+  getLaunchOptionsSync() {
+    return tt.getLaunchOptionsSync();
+  }
+}
+
+export default new Method();
+
+</script>
+

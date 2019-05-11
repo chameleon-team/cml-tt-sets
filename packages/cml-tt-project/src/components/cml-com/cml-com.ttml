@@ -1,7 +1,7 @@
 <view>
   <text class="class1">cml中引入的头条原生组件</text>
 
-  <view class="demos">
+  <view class="demos" ref="refTest">
     <button class="btn" bindtap="showAlert">Alert & showToast</button>
     <button class="btn" bindtap="setTitle">setTitle</button>
     <button class="btn" bindtap="showComfirm">Confirm & showToast</button>
@@ -11,8 +11,20 @@
     <button class="btn" bindtap="animate">animation</button>
     <button class="btn" bindtap="storage">storage</button>
     <button class="btn" bindtap="clipBoard">ClipBoard</button>
+    <button class="btn" bindtap="redirect">redirect</button>
+    <button class="btn" bindtap="getSystemInfo">getSystemInfo</button>
+    <button class="btn" bindtap="lunchOptionsSync">getLaunchOptionsSync</button>
+    <button class="btn" bindtap="getRect">getRect</button>
+    <button class="btn" bindtap="px2cpx">px2cpx</button>
+    <button class="btn" bindtap="initSocket">initSocket</button>
+    <button class="btn" bindtap="getLocationInfo">getLocationInfo</button>
+    <button class="btn" bindtap="request">request</button>
+
+    <view class="block" animation="{{animationData}}" bindtap="animate">
+      <text>请点击我</text>
+    </view>
   </view>
 
-  <view animation="{{animationData}}"></view>
+  
 
 </view>
