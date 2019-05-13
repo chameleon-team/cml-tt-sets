@@ -9,11 +9,11 @@ var util  = require('./util');
 
 var { resolveRoot, resolveTestOutput } = util
 
-var types = ['web', 'wx', 'weex', 'alipay', 'baidu'];
+var types = ['tt'];
 
 var type = process.argv[2];
 if (!type || !types.includes(type)) {
-  console.error('What type of file do you want to make?[weex/web/wx]');
+  console.error('What type of file do you want to make?');
   return;
 }
 
@@ -65,7 +65,7 @@ async function build() {
     //   rm('-rf', newPath)
 
     //   fs.renameSync(oldPath, newPath, function (err, data) {
-    //     if (err) {
+    //    if (err) {
     //       console.log(err);
     //     }
     //   });
