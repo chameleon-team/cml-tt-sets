@@ -1,5 +1,5 @@
 import BaseCtor from '../../util/proto/BaseCtor'
-import lifecycle from '../../util/lifecycle'
+import lifecycle from '../../util/util/lifecycle'
 import VmAdapter from '../core/VmAdapter'
 import MiniRuntimeCore from '../../util/proto/MiniRuntimeCore'
 

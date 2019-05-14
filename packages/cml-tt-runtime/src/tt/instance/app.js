@@ -4,7 +4,7 @@ import VmAdapter from '../core/VmAdapter.js'
 // import MiniRuntimeCore from 'chameleon-runtime/src/platform/common/proto/MiniRuntimeCore'
 import MiniRuntimeCore from '../../util/proto/MiniRuntimeCore'
 import BaseCtor from '../../util/proto/BaseCtor'
-import lifecycle from '../../util/lifecycle'
+import lifecycle from '../../util/util/lifecycle'
 
 export class App extends BaseCtor {
   constructor (options) {
