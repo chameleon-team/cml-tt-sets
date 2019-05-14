@@ -22,22 +22,23 @@
   "author": "Chameleon-Team",
   "license": "Apache",
   "dependencies": {
-    "chameleon-runtime": "^0.2.0-alpha.2"
+    "chameleon-runtime": "^0.2.0-alpha.4"
   },
   "devDependencies": {
-    "chameleon-mixins": "0.1.0-alpha.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-plugin-istanbul": "^5.1.0",
-    "babel-plugin-transform-es2015-modules-umd": "^6.6.5",
+    "babel-plugin-istanbul": "^5.1.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
+    "chameleon-css-loader": "0.1.0-alpha.4",
+    "chameleon-mixins": "0.1.0-alpha.4",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.4",
     "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.2.0",
     "shelljs": "^0.8.3"
   }
 }
