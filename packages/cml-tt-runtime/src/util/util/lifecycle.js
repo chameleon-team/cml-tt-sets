@@ -71,6 +71,20 @@ const LIFECYCLE = {
       usedHooks: ["created", "attached", "ready", "detached"],
       polyHooks: ["moved"]
     }
+  },
+  cml: {
+    hooks: [
+      'beforeCreate',
+      'created',
+      'beforeMount',
+      'mounted',
+      'beforeUpdate',
+      'updated',
+      'beforeDestroy',
+      'destroyed',
+      'onShow',
+      'onHide'
+    ]
   }
 };
 
