@@ -1,4 +1,5 @@
-import MiniVmAdapter from 'chameleon-runtime/src/platform/common/proto/MiniVmAdapter'
+// import MiniVmAdapter from 'chameleon-runtime/src/platform/common/proto/MiniVmAdapter'
+import MiniVmAdapter from '../../util/proto/MiniVmAdapter';
 import wxMixins from 'chameleon-mixins/wx-mixins.js'
 
 class VmAdapter extends MiniVmAdapter {

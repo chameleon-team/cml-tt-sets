@@ -1,7 +1,7 @@
-import BaseCtor from '../../common/proto/BaseCtor'
-import lifecycle from '../../common/util/lifecycle'
+import BaseCtor from '../../util/proto/BaseCtor'
+import lifecycle from '../../util/lifecycle'
 import VmAdapter from '../core/VmAdapter'
-import MiniRuntimeCore from '../../common/proto/MiniRuntimeCore'
+import MiniRuntimeCore from '../../util/proto/MiniRuntimeCore'
 
 export class Page extends BaseCtor {
   constructor (options) {
