@@ -34,8 +34,8 @@ describe("createApp", function() {
       expect(app).to.be.a("object");
     });
 
-    it('should return app.cmlType is "wx"', function() {
-      expect(app.cmlType).to.equal("wx");
+    it('should return app.cmlType is tt', function() {
+      expect(app.cmlType).to.equal("tt");
     });
   });
 
