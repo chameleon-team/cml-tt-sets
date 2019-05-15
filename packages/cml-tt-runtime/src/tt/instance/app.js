@@ -6,7 +6,7 @@ import MiniRuntimeCore from '../../util/proto/MiniRuntimeCore'
 import BaseCtor from '../../util/proto/BaseCtor'
 import lifecycle from '../../util/util/lifecycle'
 
-export class App extends BaseCtor {
+export class CmlApp extends BaseCtor {
   constructor (options) {
     super(options)
 
@@ -36,6 +36,6 @@ export class App extends BaseCtor {
       usedHooks: lifecycle.get('tt.app.usedHooks')
     })
 
-    __CML__GLOBAL.App(this.options)
+      App(this.options)
   }
 }

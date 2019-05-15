@@ -3,7 +3,7 @@ import lifecycle from '../../util/util/lifecycle'
 import VmAdapter from '../core/VmAdapter'
 import MiniRuntimeCore from '../../util/proto/MiniRuntimeCore'
 
-export class Component extends BaseCtor {
+export class CmlComponent extends BaseCtor {
   constructor (options) {
     super(options)
 
@@ -51,7 +51,6 @@ export class Component extends BaseCtor {
     this.options['options'] = {
       multipleSlots: true // 在组件定义时的选项中启用多slot支持
     }
-
-    __CML__GLOBAL.Component(this.options)
+      Component(this.options)
   }
 }

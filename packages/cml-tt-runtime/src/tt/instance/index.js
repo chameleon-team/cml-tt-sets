@@ -1,3 +1,3 @@
-export { App } from './app'
-export { Page } from './page'
-export { Component } from './component'
+export { CmlApp as App } from './app'
+export { CmlPage as Page } from './page'
+export { CmlComponent as Component } from './component'
