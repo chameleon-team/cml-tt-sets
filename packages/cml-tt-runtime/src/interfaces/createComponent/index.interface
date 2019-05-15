@@ -1,9 +1,10 @@
 <include src="chameleon-runtime/src/interfaces/createComponent/index.interface"></include>
 <script cml-type="tt">
+  import {Component} from '../../tt'
   class Method implements createComponentInterface {
+
     createComponent(options) {
-      Component(options);
-      return {};
+      return new Component(options)
     }
   }
 
