@@ -12,8 +12,6 @@ global.tt = {
       system: 'ios',
       windowWidth: 375,
       windowHeight: 667,
-      viewportWidth: 375,
-      viewportHeight: 667
     });
   }
   global.tt.getSystemInfoSync = function (params) {
