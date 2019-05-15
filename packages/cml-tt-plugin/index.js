@@ -23,6 +23,10 @@ module.exports = class DemoPlugin {
         'json': '.json'
       }
     }
+    this.minimizeExt = {
+      js: ['.js'],
+      css: ['.css', '.ttss']
+    }
   }
 /**
  * @description 注册插件
@@ -103,7 +107,7 @@ register(compiler) {
 
 
 
-    /**
+        /**
      * 编译结束进入打包阶段
      */
     compiler.hook('pack', function(projectGraph) {
@@ -113,7 +117,8 @@ register(compiler) {
 
       let bootstrapCode = compiler.amd.getModuleBootstrap();
       compiler.writeFile('/static/js/manifest.js', bootstrapCode);
-      let commonjsContent = `let {cmldefine} = require('./manifest.js')`;
+      let commonjsContent = `var manifest = require('./manifest.js');\n`;
+      commonjsContent += `var cmldefine = manifest.cmldefine;\n`;
       // 遍历节点
       outputNode(projectGraph);
       compiler.writeFile('/static/js/common.js', commonjsContent);
@@ -126,12 +131,13 @@ register(compiler) {
         if(currentNode.nodeType === 'app') {
           currentNode.childrens.forEach(item=>{
             if(item.moduleType === 'json') {
-              debugger
               compiler.writeFile('/app.json',item.output, '', 4)
             } else if(item.moduleType === 'style') {
               compiler.writeFile('/app.ttss', item.output)
             } else if(item.moduleType === 'script') {
-              let jsContent = `let {cmldefine, cmlrequire} = require('./static/js/manifest.js');\n`;
+              let jsContent = `var manifest = require('./static/js/manifest.js');\n`;
+              jsContent += `var cmldefine = manifest.cmldefine;\n`;
+              jsContent += `var cmlrequire = manifest.cmlrequire;\n`;
               jsContent += `require('./static/js/common.js');\n`;
               jsContent += `cmlrequire('${item.modId}')\n`;
               let jsPath = '/app.js';
@@ -174,9 +180,11 @@ register(compiler) {
               let array = jsFileName.split('/');
               let basename = array[array.length-1].split('.')[0] + '.js';
               jsFileName = [].concat(array.slice(0,-1),basename).join('/');
-              let content = `let {cmldefine, cmlrequire} = require('${relativePath}/static/js/manifest.js')\n`;
-              content += `require('${relativePath}/static/js/common.js')\n`;
-              content += `cmlrequire('${item.modId}')\n`;
+              let content = `var manifest = require('${relativePath}/static/js/manifest.js');\n`;
+              content += `var cmldefine = manifest.cmldefine;\n`;
+              content += `var cmlrequire = manifest.cmlrequire;\n`;
+              content += `require('${relativePath}/static/js/common.js');\n`;
+              content += `cmlrequire('${item.modId}');\n`;
               compiler.writeFile(jsFileName, content)
             }
             outputNode(item);
