@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:build": "node test/build/index.js tt",
-    "cover": "babel-node ./node_modules/.bin/istanbul cover --report lcov --root test/.chameleon node_modules/mocha/bin/_mocha -- -R spec --colors --recursive test/**/*.test.js",
+    "cover": "babel-node ./node_modules/.bin/istanbul cover --report lcov --root test/.chameleon node_modules/mocha/bin/_mocha -- -R spec --colors --recursive test/**/**/*.test.js",
     "test": "npm run test:build && npm run cover"
   },
   "babel": {
