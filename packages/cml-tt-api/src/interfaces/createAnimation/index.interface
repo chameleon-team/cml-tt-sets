@@ -34,10 +34,9 @@
       animation.step(descriptions);
     });
 
-    const temp = animation.export();
+    const temp = JSON.parse(animation.export()); 
     temp.cbs = cbs;
     temp.index = 0;
-
     return temp;
   };
 

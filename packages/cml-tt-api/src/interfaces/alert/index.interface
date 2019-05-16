@@ -3,7 +3,6 @@
 
 // 扩展实现新端
 <script cml-type="tt">
-
 class Method implements uiInterface {
   alert(opt, successCallBack, failCallBack) {
     let { message, confirmTitle} = opt;

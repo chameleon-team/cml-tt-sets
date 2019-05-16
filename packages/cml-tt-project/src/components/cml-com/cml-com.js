@@ -1,6 +1,6 @@
 import cml from 'cml-tt-api';
 import { createAnimation } from "cml-tt-api";
-console.log(createAnimation,'---')
+// import { createAnimation } from "chameleon-api";
 // const animation = createAnimation();// cml-com.js
 Component({
   /**
@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    animationData: {}
+    animationData: null
   },
 
   /**
@@ -34,6 +34,7 @@ Component({
     },
     setTitle: function(){
       cml.setTitle('我是标题')
+      // tt.showToast({title: '我是标题我是标题我是标题我是标题我是标题'})
     },
     setTitle1: function(){
      
@@ -54,6 +55,7 @@ Component({
     chooseImg: function(){
       cml.chooseImage({ type: 'choice' }).then((res) => {
         console.log(res)
+        
         // 接下来可以进行上传到服务器等操作
       })
     },
@@ -63,13 +65,20 @@ Component({
     },
 
     animate: function() {  
-      console.log(cml)
-
       let animate = cml.createAnimation()
-      console.log(animate)
-      this.animationData = animate
-      .rotate(90).step({duration: 1000})
-      .export();
+
+      this.animate = animate
+      this.animate
+            .backgroundColor('red');
+      this.animate
+          .scaleX(2)
+          .step({
+              duration: 5000
+          });
+
+      this.setData({
+          animationData: JSON.stringify( this.animate.export() )
+      });
     },
 
     storage: function(){
@@ -77,12 +86,17 @@ Component({
         cml.getStorage('name').then((value)=>{
           // 处理获取到的键值
           console.log(value)
+          cml.showToast({
+            message: value,
+            duration:1000
+          })
         })
 
         cml.removeStorage('name').then(()=>{
           cml.getStorage('name').then((value)=>{
             // 处理获取到的键值
             console.log(value,'----')
+          
           })
         })
       })
@@ -118,15 +132,19 @@ Component({
     getSystemInfo: function(){
       cml.getSystemInfo().then(info => {
         console.log(info)
-        cml.navigateBack(-1);
+        cml.showToast({
+          message: JSON.stringify(info),
+          duration: 2000
+        })
+        // cml.navigateBack(-1);
       })      
     },
     lunchOptionsSync: function(){
       let obj = cml.getLaunchOptionsSync();
       console.log(obj)
-      // cml.showToast({
-      //   message: JSON.stringify(obj)
-      // })
+      cml.showToast({
+        message: JSON.stringify(obj)
+      })
     },
     getRect: function(){
       cml.getRect('refTest', this).then(res => {
@@ -144,6 +162,9 @@ Component({
       cml.canIUse('showToast').then(() => {
         // 支持
         console.log('支持')
+        cml.showToast({
+          message: '支持'
+        })
       }, () => {
         // 不支持
         console.log('不支持')
@@ -193,6 +214,9 @@ Component({
       cml.getLocationInfo().then(res => {
         // res: { lng[number]: 40.33, lat[number]: 154.33 }
         console.log(res)
+        cml.showToast({
+          message: JSON.stringify(res)
+        })
       })
     },
     request: function(){
