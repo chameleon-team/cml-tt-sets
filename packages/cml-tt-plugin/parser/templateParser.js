@@ -1,4 +1,5 @@
 const {cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
+const parseDirective = require('./directiveParser');
 
 module.exports = function(content) {
   let ast = cmlparse(content);
@@ -14,6 +15,13 @@ module.exports = function(content) {
           if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-if') {
             attr.name.name = 'tt:if'
           }
+          if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-else') {
+            attr.name.name = 'tt:else'
+          }
+          if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-else-if') {
+            attr.name.name = 'tt:elif'
+          }
+          parseDirective.call(node)
         })
         let tagName = node.openingElement.name.name;
         if(/^origin\-/.test(tagName)) {
