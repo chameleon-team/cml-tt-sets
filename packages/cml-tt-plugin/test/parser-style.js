@@ -1,4 +1,4 @@
-const styleParser = require('../styleParser');
+const styleParser = require('../src/parser/parser-style');
 
 let content = `
 .test {

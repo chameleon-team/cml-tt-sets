@@ -1,6 +1,6 @@
 
-const templateParser = require('./parser/templateParser.js/index.js');
-const styleParser = require('./parser/styleParser.js');
+const templateParser = require('./src/parser/parser-template.js/index.js.js.js');
+const styleParser = require('./src/parser/parser-style.js');
 const cmlUtils = require('chameleon-tool-utils');
 const path = require('path');
 module.exports = class TouTiaoPlugin {
