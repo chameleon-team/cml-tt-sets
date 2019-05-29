@@ -1,11 +1,11 @@
-const {cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
-const { trimCurly, getModelKey, modelEventProxyName, trim, isInlineStatementFn } = require('../util');
+const { types: t } = require('mvvm-template-parser');
 
 module.exports = function(context) {
-  let { attributes, tagName, attr } = context;
+  let { options, attributes, tagName } = context;
   let classNodes = attributes.filter((attr) => attr.name.name === 'class');
-  let extraClass = ` cml-base cml-${tagName}`;
-  // 这里有一个useComponents的逻辑，带template节点加上之后再处理
+  let isUsingComponents = (options.usingComponents || []).find((comp) => comp.tagName === tagName);
+  let extraClass = isUsingComponents ? ` cml-view cml-${tagName}` : ` cml-base cml-${tagName}`;
+
   if (classNodes.length === 0) {
     attributes.push(t.jsxAttribute(t.jsxIdentifier('class'), t.stringLiteral(extraClass)));
   } else if (classNodes.length === 1) {

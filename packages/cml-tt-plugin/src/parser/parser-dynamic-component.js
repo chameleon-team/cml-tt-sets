@@ -1,8 +1,8 @@
-const { cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
+const { types: t } = require('mvvm-template-parser');
 const { trimCurly, trim } = require('../util');
 
 module.exports = function (context) {
-  let { path, node, tagName, attributes, attr } = context;
+  let { options, path, node, tagName, attributes, attr } = context;
   if (tagName.toLowerCase() === 'component' && t.isJSXIdentifier(attr.name) && attr.name.name === 'is') {
     let hasIfDirective = attributes.find((attr) => attr.name.name === 'c-if' || attr.name.name === 'tt:if')
     if (hasIfDirective) {
@@ -12,8 +12,7 @@ module.exports = function (context) {
     const shrinkcomponentsAttr = attributes.find((attr) => attr.name.name === 'shrinkcomponents');
     const shrinkcomponents = shrinkcomponentsAttr ? shrinkcomponentsAttr.value.value : []
     const currentComp = trimCurly(attr.value.value);
-    // let usingComponents = (options.usingComponents || []).map(item => item.tagName);
-    let usingComponents = [];
+    let usingComponents = (options.usingComponents || []).map(item => item.tagName);
     let jsxElementChildren = node.children || [];
     if (shrinkcomponents.length) {
       usingComponents = shrinkcomponents.split(',').reduce((result, comp) => {

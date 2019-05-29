@@ -10,7 +10,7 @@ const parserDynamicComponent = require('./parser-dynamic-component');
 // 标记此attr需要被替换或者是单纯的删除
 const EMPTYTAG = Symbol('cml-remove-tag');
 
-module.exports = function(content) {
+module.exports = function(content, options = {}) {
   let ast = cmlparse(content);
   traverse(ast, {
     enter(path) {
@@ -19,7 +19,7 @@ module.exports = function(content) {
         
         let tagName = node.openingElement.name.name;
         let attributes = node.openingElement.attributes;
-        let context = { path, node, tagName, attributes, EMPTYTAG };
+        let context = { options, path, node, tagName, attributes, EMPTYTAG };
 
         // 处理组件tag相关
         parserTag(context);

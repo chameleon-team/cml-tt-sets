@@ -1,5 +1,5 @@
 
-const templateParser = require('./src/parser/parser-template.js/index.js.js.js');
+const templateParser = require('./src/parser/parser-template.js');
 const styleParser = require('./src/parser/parser-style.js');
 const cmlUtils = require('chameleon-tool-utils');
 const path = require('path');
@@ -40,7 +40,7 @@ module.exports = class TouTiaoPlugin {
        * nodeType 节点的nodeType
        */
       compiler.hook('compile-preCML', function(currentNode, nodeType) {
-        
+
       })
       /**
        * cml节点编译后
@@ -75,7 +75,9 @@ module.exports = class TouTiaoPlugin {
        * parentNodeType 父节点的nodeType
        */
       compiler.hook('compile-template', function(currentNode, parentNodeType) {
-          currentNode.output = templateParser(currentNode.source)
+        // 部分template处理也需要用到options
+        const options = currentNode.extra
+        currentNode.output = templateParser(currentNode.source, options)
       })
 
       /**
