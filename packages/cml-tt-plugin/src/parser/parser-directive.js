@@ -1,5 +1,6 @@
-const {cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
-const { trimCurly, getModelKey, modelEventProxyName, trim, isInlineStatementFn } = require('../util');
+const { types: t } = require('mvvm-template-parser');
+const { trimCurly, getModelKey } = require('../util');
+const ttMixin = require('../../../cml-tt-mixins/index');
 
 module.exports = function(context) {
   let { attributes, attr, node, EMPTYTAG } = context;
@@ -32,15 +33,15 @@ module.exports = function(context) {
     // 去除原本的cml-model指令，替换为value和input双向的语法糖
     attr.name.name = EMPTYTAG;
     let modelKey = getModelKey(attr.value.value);
-    attributes.push(t.jsxAttribute(t.jsxIdentifier(`value`), t.stringLiteral(attr.value.value)))
-    attributes.push(t.jsxAttribute(t.jsxIdentifier(`data-modelkey`), t.stringLiteral(`${modelKey}`)))
-    attributes.push(t.jsxAttribute(t.jsxIdentifier(`bindinput`), t.stringLiteral(`${modelEventProxyName}`)));
+    attributes.push(t.jsxAttribute(t.jsxIdentifier(`value`), t.stringLiteral(attr.value.value)));
+    attributes.push(t.jsxAttribute(t.jsxIdentifier(`data-modelkey`), t.stringLiteral(`${modelKey}`)));
+    attributes.push(t.jsxAttribute(t.jsxIdentifier(`bindinput`), t.stringLiteral(`${ttMixin.modelEventProxyName}`)));
   }
 
   // c-show
   if (t.isJSXIdentifier(attr.name) && attr.name.name === 'c-show') {
     // c-show和style不能同时使用
-    let styleNode = attributes.find((attr) => attr.name.name === 'style' || attr.name.name.name === 'style')
+    let styleNode = attributes.find((attr) => attr.name.name === 'style' || attr.name.name.name === 'style');
     if (styleNode) {
       throw new Error(`The style attribute can't be used in the element that has  attributes with c-show `);
     }
@@ -48,8 +49,8 @@ module.exports = function(context) {
     attr.name.name = EMPTYTAG;
     let elementShow = trimCurly(attr.value.value);
 
-    let styleNodeValue = `display:{{${elementShow}?'':'none'}};{{${elementShow}?'':'height:0px;width:0px;overflow:hidden'}}`
-    attributes.push(t.jsxAttribute(t.jsxIdentifier(`style`), t.stringLiteral(styleNodeValue)))
+    let styleNodeValue = `display:{{${elementShow}?'':'none'}};{{${elementShow}?'':'height:0px;width:0px;overflow:hidden'}}`;
+    attributes.push(t.jsxAttribute(t.jsxIdentifier(`style`), t.stringLiteral(styleNodeValue)));
   }
 
   // c-text

@@ -7,14 +7,7 @@ _.getModelKey = function(modelKey) {
   modelKey = modelKey.trim();
   return modelKey;
 }
-// model事件处理
-_.modelEventProxyName = function(e) {
-  let dataset = e.currentTarget && e.currentTarget.dataset
-  let modelKey = dataset && dataset.modelkey
-  if (modelKey) {
-    this[modelKey] = e.detail.value;
-  }
-}
+
 // 驼峰化单词
 _.camelize = function(str) {
   return str.replace(/[-_\s]+(.)/g, function(match, key) {
@@ -108,3 +101,27 @@ _.makeMap = function(str, expectsLowerCase) {
 }
 _.isPlainTextElement = _.makeMap('script,style,textarea', true)
 
+// 转换 $event参数
+_.getInlineStatementArgs = function(argsStr) {
+  // argsStr:"1,'index'+1,$event,'item',index+1,item"
+  const result = argsStr.split(',').reduce((result, current, index) => {
+    if (current === '$event') {
+      result.push("'$event'");
+    } else {
+      result.push(current)
+    }
+    return result
+  }, []);
+  return result.join();// "1,'index'+1,'$event','item',index+1,item"
+
+}
+
+_.isOriginTagOrNativeComp = function(tagName, options) {
+  let usedComponentInfo = (options.usingComponents || []).find((item) => item.tagName === tagName)
+  let isNative = usedComponentInfo && usedComponentInfo.isNative;
+  let isOrigin = (tagName && typeof tagName === 'string' && tagName.indexOf('origin-') === 0);
+  if (isOrigin || isNative) {
+    return true
+  }
+  return false;
+}
