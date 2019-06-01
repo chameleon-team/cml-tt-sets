@@ -21,10 +21,6 @@ module.exports = function(content, options = {}) {
         let attributes = node.openingElement.attributes;
         let context = { options, path, node, tagName, attributes, EMPTYTAG };
 
-        // 处理组件tag相关
-        parserTag(context);
-        // 处理完tag再处理class
-        parserClass(context);
         attributes.forEach(attr => {
           context.attr = attr;
           // 处理组件指令
@@ -38,6 +34,10 @@ module.exports = function(content, options = {}) {
           // 处理c-animation
           parserAnimationTag(context);
         })
+        // 处理组件tag相关, 处理tag要放在后边，防止对原生组件的event进行处理
+        parserTag(context);
+        // 处理完tag再处理class
+        parserClass(context);
         // 去掉被标记为删除的attr
         node.openingElement.attributes = attributes = attributes.filter(attr => attr.name.name !== EMPTYTAG);
       }
