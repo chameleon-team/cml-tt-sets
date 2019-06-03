@@ -1,15 +1,11 @@
 <template>
-  <view class="demo-com">
-    <text class="title">component</text>
- <view class="class1"><text>chameleon</text></view>
-    <text>Hello {{name}}!</text>
-    <text>计算属性: {{computeName}}!</text>
+  <view class="api-com">
     <cml-com></cml-com>
   </view>
 </template>
 
 <script>
-class DemoCom {
+class ApiCom {
    data = {
     name: 'Chameleon'
   }
@@ -44,10 +40,10 @@ class DemoCom {
 }
 require('../../assets/images/chameleon.png')
 
-export default new DemoCom();
+export default new ApiCom();
 </script>
 <style>
-.demo-com {
+.api-com {
   display: flex;
   flex-direction: column;
   align-items: center;

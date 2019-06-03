@@ -1,40 +1,57 @@
 <template>
-  <view c-if="{{true}}" class="scroller-wrap">
-    <view class="class1"><text>chameleon</text></view>
+  <view>
+    <text>api demo</text>
+    <api-com></api-com>
   </view>
-
 </template>
 
 <script>
-// import cml from 'cml-tt-api';
-class Index  {}
 
-export default new Index();
+class Api   {
 
-// cml.alert({message: 'chameleon', confirmTitle:'确定'})
+  data = {
+  }
 
+  computed = {
+  }
+
+  watch  = {
+  }
+
+  methods = {
+  }
+
+  beforeCreate() {
+  }
+
+  created() {
+  }
+
+  beforeMount() {
+  }
+
+  mounted() {
+  }
+
+  beforeDestroy() {
+  }
+
+  destroyed() {
+  }
+}
+
+export default new Api();
 </script>
+
 <style>
 
-.scroller-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.class1 {
-  width: 100cpx;
-  height: 100cpx;
-  background: url('../../assets/images/chameleon.png') no-repeat;
-  background-size: 100cpx 100cpx;
-}
-
 </style>
+
 <script cml-type="json">
 {
   "base": {
     "usingComponents": {
-      "demo-com": "/components/demo-com/demo-com"
+      "api-com": "../../components/api-com/api-com"
     }
   },
   "wx": {

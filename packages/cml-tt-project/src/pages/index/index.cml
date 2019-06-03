@@ -3,13 +3,17 @@
     <view class="class1"><text>chameleon</text></view>
     <text>Hello {{name}}!</text>
     <text>计算属性: {{computeName}}!</text>
-    <demo-com></demo-com>
+    <text>计算属性: {{computeName}}!</text>
+    <view><text c-bind:tap="gotoApiPage">gotoApiPage</text></view>
+    <view><text c-bind:tap="gotoPluginPage">gotoPluginPage</text></view>
+    <view><text c-bind:tap="gotoRuntimePage">gotoRuntimePage</text></view>
+    <view><text c-bind:tap="gotoUiPage">gotoUiPage</text></view>
+    <view><text c-bind:tap="gotoUiBuiltinPage">gotoUiBuiltinPage</text></view>
   </view>
-
 </template>
 
 <script>
-// import cml from 'cml-tt-api';
+import cml from 'cml-tt-api';
 class Index  {
   data = {
     name: 'Chameleon'
@@ -18,6 +22,7 @@ class Index  {
 		console.log("TCL: Index -> beforeCreate -> e", e)
     console.log('before Create');
   }
+
   created(e) {
 		console.log("TCL: Index -> created -> e", e)
     console.log('created');
@@ -41,6 +46,33 @@ class Index  {
     name: function (newV, oldV) {
 			console.log("TCL: Index -> newV, oldV", newV, oldV)
     },
+  }
+  methods = {
+    gotoApiPage() {
+      cml.navigateTo({
+        path: '/pages/api/api'
+      })
+    },
+    gotoPluginPage() {
+      cml.navigateTo({
+        path: '/pages/plugin/plugin'
+      })
+    },
+    gotoRuntimePage() {
+      cml.navigateTo({
+        path: '/pages/runtime/runtime'
+      })
+    },
+    gotoUiPage() {
+      cml.navigateTo({
+        path: '/pages/ui/ui'
+      })
+    },
+    gotoUiBuiltinPage() {
+      cml.navigateTo({
+        path: '/pages/ui-builtin/ui-builtin'
+      })
+    }
   }
 
 }
@@ -70,7 +102,6 @@ export default new Index();
 {
   "base": {
     "usingComponents": {
-      "demo-com": "/components/demo-com/demo-com"
     }
   },
   "wx": {

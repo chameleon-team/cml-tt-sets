@@ -13,6 +13,7 @@ module.exports = function (context) {
   let namespace = attr.name && attr.name.namespace;
   let parentPath = path.parentPath;
   let container = path.container;
+  debugger
   let value = container.value;
   if (namespace && (namespace.name === 'c-bind' || attr.name.namespace.name === 'c-catch')) {
     // 头条文档上并没有找到关于catch的描述。。。。。。
