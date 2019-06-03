@@ -20,7 +20,7 @@ cml.config.merge({
     path.join(__dirname,'node_modules/cml-tt-ui'),
     path.join(__dirname,'node_modules/cml-tt-store'),
   ],
-  platforms: ["web","weex","wx","alipay","baidu"],
+  platforms: ['tt'],
   buildInfo: {
     wxAppId: '123456'
   },
