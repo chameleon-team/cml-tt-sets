@@ -2,3 +2,10 @@
 .class1 {
   color: red;
 }
+
+.block {
+  position: absolute;
+  width: 200cpx;
+  height: 200cpx;
+  background-color: #E3EDCD;
+}
