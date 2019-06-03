@@ -8,6 +8,8 @@ let content = `
   <text c-text="{{msg}}"></text>
   <input c-model="{{msg}}"></input>
   <origin-button c-bind:tap="handlerFunc"></origin-button>
+  <view><text c-bind:tap="gotoApiPage">gotoApiPage</text></view>
+  <view><text c-bind:tap="gotoApiPage(name, age)">gotoApiPage</text></view>
   <component is="{{ condition ? 'com1' : 'com2' }}" shrinkcomponents="com1, com2"></component>
 </view>
 `
