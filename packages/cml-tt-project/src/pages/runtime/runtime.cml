@@ -1,39 +1,46 @@
 <template>
-  <view><text>Hello Chameleon!</text></view>
+  <view> <view class="class1"><text>chameleon</text></view>
+    <text>Hello {{name}}!</text>
+    <text>计算属性: {{computeName}}!</text>
+    <text>计算属性: {{computeName}}!</text>
+    </view>
 </template>
 
 <script>
 
 class Runtime   {
-
-  data = {
+data = {
+    name: 'Chameleon'
+  }
+  beforeCreate(e) {
+		console.log("TCL: Index -> beforeCreate -> e", e)
+    console.log('before Create');
   }
 
-  computed = {
+  created(e) {
+		console.log("TCL: Index -> created -> e", e)
+    console.log('created');
   }
-
-  watch  = {
+  beforeMount(e) {
+		console.log("TCL: Index -> beforeMount -> e", e)
+    console.log('brefore Mount');
   }
-
-  methods = {
-  }
-
-  beforeCreate() {
-  }
-
-  created() {
-  }
-
-  beforeMount() {
-  }
-
   mounted() {
+    debugger
+    console.log('mounted');
+    setTimeout(() => {
+      this.name="22222"
+    }, 1000);
   }
-
-  beforeDestroy() {
+  computed = {
+    computeName: function () {
+      return 'prefix' + this.name
+    }
   }
-
-  destroyed() {
+   watch = {
+    name: function (newV, oldV) {
+			console.log("TCL: Index -> newV, oldV", newV, oldV)
+    },
   }
 }
 

@@ -6,6 +6,7 @@ const apiPrefix = 'https://api.chameleon.com';
 const path = require('path');
 
 cml.config.merge({
+  // enableLinter: false,
   templateLang: "cml",
   templateType: "html",
   builtinNpmName: 'cml-tt-ui-builtin',

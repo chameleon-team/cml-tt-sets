@@ -1,6 +1,6 @@
 // import MiniVmAdapter from 'chameleon-runtime/src/platform/common/proto/MiniVmAdapter'
 import MiniVmAdapter from '../../util/proto/MiniVmAdapter';
-import wxMixins from 'chameleon-mixins/wx-mixins.js'
+import ttMixins from 'cml-tt-mixins'
 
 class VmAdapter extends MiniVmAdapter {
   constructor(config) {
@@ -8,7 +8,7 @@ class VmAdapter extends MiniVmAdapter {
 
     this.platform = 'tt'
     // 样式、事件代理 mixins
-    this.baseMixins = wxMixins.mixins
+    this.baseMixins = ttMixins.mixins
     this.init()
   }
 }
