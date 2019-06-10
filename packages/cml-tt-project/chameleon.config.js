@@ -25,6 +25,9 @@ cml.config.merge({
     wxAppId: '123456'
   },
   tt: {
+    dev: {
+      moduleIdType: 'name'
+    },
     build: {
       minimize: true
     }
