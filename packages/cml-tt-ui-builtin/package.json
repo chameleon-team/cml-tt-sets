@@ -7,7 +7,7 @@
   },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "main": "/components",
+  "main": "/package/components",
   "dependencies": {
     "chameleon-ui-builtin": "^0.4.0-mvvm.3"
   }
