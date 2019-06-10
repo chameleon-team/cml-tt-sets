@@ -1,44 +1,44 @@
 <template>
-<c-page title="checkbox演示">
-  <c-header title="checkbox"></c-header>
+<page title="checkbox演示">
+  <header title="checkbox"></header>
   <view class="title"><text>Checkbox</text></view>
     <view class="box">
-      <c-checkbox 
+      <checkbox 
         checked="{{checkboxValue1}}"
         disabled="{{false}}"
         label="Checkbox1"
         c-bind:change="valueChange1"
         >
-      </c-checkbox>
+      </checkbox>
     </view>
     <view class="title">
       <text>value: {{ checkboxValue1 + '' }}</text>
     </view>
     <view class="box">
-      <c-checkbox
+      <checkbox
         checked="{{checkboxValue2}}"
         label="Checkbox2"
         position="right"
         c-bind:change="valueChange2"
         >
-      </c-checkbox>
+      </checkbox>
     </view>
     <view class="title">
       <text>value: {{ checkboxValue2 + '' }}</text>
     </view>
     <view class="box">
-      <c-checkbox
+      <checkbox
         checked="{{checkboxValue3}}"
         label="Checkbox3"
         position="right"
         disabled="{{true}}"
         >
-      </c-checkbox>
+      </checkbox>
     </view>
     <view class="title">
       <text>value: {{ checkboxValue3 + '' }}</text>
     </view>
-</c-page>
+</page>
 </template>
 <script>
 class Checkbox {
@@ -104,9 +104,6 @@ export default new Checkbox();
 {
     "base": {
         "usingComponents": {
-          "c-page": "/components/page/page",
-          "c-header": "../../components/header/header",
-          "c-checkbox": "/components/checkbox/checkbox"
         },
         "navigationBarTitleText": "checkbox",
         "backgroundTextStyle": "dark",

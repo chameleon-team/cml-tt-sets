@@ -1,10 +1,10 @@
 <template>
-<c-page title="video">
+<page title="video">
   <view class="container">
-    <c-header title="video"></c-header>
+    <header title="video"></header>
       <text>视频state: </text>
       <text class="info">{{state}}</text>
-      <c-video
+      <video
           class="video"
           src="{{videoSrc}}"
           autoplay="{{true}}"
@@ -14,9 +14,9 @@
           c-bind:finish="onfinish"
           c-bind:fail="onfail"
           cstyle="display:flex;flex-direction: column;align-items: center;width: 700cpx;"
-      ></c-video>
+      ></video>
 </view>
-</c-page>
+</page>
 </template>
 <script>
   import cml from 'chameleon-api'
@@ -88,9 +88,6 @@ export default new Video();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header",
-            "c-video": "/components/video/video"
         },
         "navigationBarTitleText": "video",
         "backgroundTextStyle": "dark",

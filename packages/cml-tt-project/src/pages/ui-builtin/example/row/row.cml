@@ -1,34 +1,34 @@
 <template>
-<c-page title="row演示">
-    <c-header title="c-row"></c-header>
-    <c-row margin="{{100}}">
+<page title="row演示">
+    <header title="c-row"></header>
+    <row margin="{{100}}">
       <view class="col-item"></view>
       <view class="col-item"></view>
       <view class="col-item"></view>
-    </c-row>
-    <c-row margin="{{100}}" height="{{200}}">
-      <c-col width="{{50}}" height="{{100}}" background-color="#ddd" margin="{{20}}">
+    </row>
+    <row margin="{{100}}" height="{{200}}">
+      <col width="{{50}}" height="{{100}}" background-color="#ddd" margin="{{20}}">
         <view></view>
-      </c-col>
-      <c-col  width="{{100}}" height="{{100}}" background-color="#bbb" margin="{{20}}">
+      </col>
+      <col  width="{{100}}" height="{{100}}" background-color="#bbb" margin="{{20}}">
         <view></view>
-      </c-col>
-      <c-col  width="{{200}}" height="{{100}}" background-color="#aaa" margin="{{20}}">
+      </col>
+      <col  width="{{200}}" height="{{100}}" background-color="#aaa" margin="{{20}}">
         <view></view>
-      </c-col>
-    </c-row>
-    <c-row margin="{{100}}" height="{{100}}">
-      <c-col margin="{{50}}">
+      </col>
+    </row>
+    <row margin="{{100}}" height="{{100}}">
+      <col margin="{{50}}">
         <view class="col-item-2"></view>
-      </c-col>
-      <c-col margin="{{50}}">
+      </col>
+      <col margin="{{50}}">
         <view class="col-item-2"></view>
-      </c-col>
-      <c-col margin="{{50}}">
+      </col>
+      <col margin="{{50}}">
         <view class="col-item-2"></view>
-      </c-col>
-    </c-row>
-</c-page>
+      </col>
+    </row>
+</page>
 </template>
 <script>
  class Row {
@@ -56,10 +56,6 @@
 {
   "base": {
     "usingComponents": {
-      "c-page": "/components/page/page",
-      "c-row": "/components/layout/row/row",
-      "c-col": "/components/layout/col/col",
-      "c-header": "../../components/header/header"
     },
     "navigationBarTitleText": "row",
     "backgroundTextStyle": "dark",

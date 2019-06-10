@@ -1,7 +1,7 @@
 <template>
-<c-page title="text">
+<page title="text">
   <view class="page-demo">
-    <c-header title="text"></c-header>
+    <header title="text"></header>
       <view class="text-area">
         <view c-for="{{addLine}}" c-key="{{item}}">
           <text class="line-text">{{item}}</text>
@@ -10,7 +10,7 @@
       <view class="btn" c-bind:tap="add"><text class="{{addTextClass}}">add line</text></view>
       <view class="btn" c-bind:tap="remove"><text class="{{removeTextClass}}">remove line</text></view>
   </view>
-</c-page>
+</page>
 </template>
 <script>
   class Text   {
@@ -102,8 +102,6 @@ export default new Text();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header"
         },
         "navigationBarTitleText": "text",
         "backgroundTextStyle": "dark",

@@ -1,6 +1,6 @@
 <template>
-  <c-page title="carousel">
-    <c-header title="carousel"></c-header>
+  <page title="carousel">
+    <header title="carousel"></header>
     <carousel class="container" indicator-dots="{{true}}"  current="{{0}}" circular="{{true}}" autoplay="{{true}}" interval="{{2000}}">
       <carousel-item>
         <view  class="carousel-item" style="background-color: #EBDEAA"></view>
@@ -12,7 +12,7 @@
         <view class="carousel-item" style="background-color: #EAEAEF"></view>
       </carousel-item>
     </carousel>
-  </c-page>
+  </page>
 </template>
 <script>
   class Carousel {}
@@ -35,10 +35,6 @@
 {
   "base": {
     "usingComponents": {
-      "c-page": "/components/page/page",
-      "c-header": "../../components/header/header",
-      "carousel": "/components/carousel/carousel",
-      "carousel-item": "/components/carousel-item/carousel-item"
     }
   }
 }

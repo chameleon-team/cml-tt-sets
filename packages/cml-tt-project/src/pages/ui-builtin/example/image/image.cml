@@ -1,10 +1,10 @@
 <template>
-<c-page title="image">
+<page title="image">
     <view class="container">
-        <c-header title="image" desc="这是一张本地图片"></c-header>
+        <header title="image" desc="这是一张本地图片"></header>
         <image src="{{imageSrc}}" style="width: 682cpx;height:600cpx;" c-bind:load="imageLoad" c-bind:error="imageError"></image>
     </view>
-</c-page>
+</page>
 </template>
 <script>
 class Image {
@@ -33,8 +33,6 @@ export default new Image();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header"
         },
         "navigationBarTitleText": "image",
         "backgroundTextStyle": "dark",

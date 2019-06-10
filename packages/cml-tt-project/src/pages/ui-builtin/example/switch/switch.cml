@@ -1,53 +1,53 @@
 <template>
-<c-page title="switch演示">
-  <c-header title="switch"></c-header>
+<page title="switch演示">
+  <header title="switch"></header>
     <view class="box">
-      <c-switch
+      <switch
         checked="{{ switchValue1 }}"
         label="Switch"
         c-bind:change="switchChange1"
         opencolor="#fc9153"
         >
-      </c-switch>
+      </switch>
     </view>
     <view class="title">
       <text>switch value: {{ switchValue1 }}</text>
     </view>
     <view class="box">
-      <c-switch
+      <switch
         checked="{{ switchValue2 }}"
         label="Switch"
         c-bind:change="switchChange2"
         >
-      </c-switch>
+      </switch>
     </view>
     <view class="title">
      <text>switch value: {{ switchValue2 }}</text>
    </view>
     <view class="box">
-       <c-switch
+       <switch
         checked="{{ switchValue3 }}"
         label="Disabled Switch"
         disabled="{{true}}"
         >
-      </c-switch>
+      </switch>
     </view>
     <view class="title">
       <text>switch value: {{ switchValue3 }}</text>
     </view>
     <view class="box">
-       <c-switch
+       <switch
         checked="{{ switchValue4 }}"
         label="Disabled Switch"
         disabled="{{true}}"
         opencolor="green"
         >
-      </c-switch>
+      </switch>
     </view>
     <view class="title">
       <text>switch value: {{ switchValue4 }}</text>
     </view>
-</c-page>
+</page>
 </template>
 <script>
 import cml from "chameleon-api"
@@ -96,9 +96,6 @@ export default new Switch();
 {
     "base": {
         "usingComponents": {
-          "c-page": "/components/page/page",
-          "c-header": "../../components/header/header",
-          "c-switch": "/components/switch/switch"
         },
         "navigationBarTitleText": "switch",
         "backgroundTextStyle": "dark",

@@ -1,10 +1,10 @@
 <template>
-<c-page title="richtext">
+<page title="richtext">
   <view class="container">
-    <c-header title="richtext"></c-header>
-    <c-richtext rich-data="{{richData}}" style="width: 200cpx; height: 100cpx;"></c-richtext>
+    <header title="richtext"></header>
+    <richtext rich-data="{{richData}}" style="width: 200cpx; height: 100cpx;"></richtext>
   </view>
-</c-page>
+</page>
 
 </template>
 <script>
@@ -71,9 +71,6 @@ export default new Richtext();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header",
-            "c-richtext": "/components/richtext/richtext"
         },
         "navigationBarTitleText": "richtext",
         "backgroundTextStyle": "dark",

@@ -1,56 +1,56 @@
 <template>
-<c-page title="radio演示">
-  <c-header title="radio"></c-header>
+<page title="radio演示">
+  <header title="radio"></header>
   <view class="box">
-    <c-radio
+    <radio
       checked="{{ radioValue1 }}"
       label="Option1"
       c-bind:change="valueChange1"
       color="#fc9153"
       >
-    </c-radio>
+    </radio>
   </view>
   <view class="title">
     <text>value: {{ radioValue1 + ''}}</text>
   </view>
   <view class="box">
-    <c-radio
+    <radio
       checked="{{ radioValue2 }}"
       label="Option3"
       position="right"
       c-bind:change="valueChange2"
       color="#fc9153"
       >
-    </c-radio>
+    </radio>
   </view>
   <view class="title">
     <text>value: {{ radioValue2 + '' }}</text>
   </view>
   <view class="box">
-     <c-radio
+     <radio
       checked="{{ radioValue3 }}"
       label="Option2"
       disabled="{{ true }}"
       color="green"
       >
-    </c-radio>
+    </radio>
   </view>
   <view class="title">
     <text>value: {{ radioValue3 + '' }}</text>
   </view>
   <view class="box">
-    <c-radio
+    <radio
       checked="{{ radioValue4 }}"
       label="Option3"
       position="right"
       disabled="{{ true }}"
       >
-    </c-radio>
+    </radio>
   </view>
   <view class="title">
     <text>value: {{ radioValue4 + '' }}</text>
   </view>
-</c-page>
+</page>
 </template>
 <script>
 class Radio {
@@ -100,9 +100,6 @@ export default new Radio();
 {
     "base": {
         "usingComponents": {
-          "c-page": "/components/page/page",
-          "c-header": "../../components/header/header",
-          "c-radio": "/components/radio/radio"
         },
         "navigationBarTitleText": "radio",
         "backgroundTextStyle": "dark",

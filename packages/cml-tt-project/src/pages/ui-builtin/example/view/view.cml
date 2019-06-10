@@ -1,8 +1,8 @@
 <template>
-<c-page title="view">
+<page title="view">
   <view class="page-demo">
-    <c-scroller height="{{-1}}">
-      <c-header title="view"></c-header>
+    <scroller height="{{-1}}">
+      <header title="view"></header>
         <view class="page-box">
             <view class="page-section">
                 <view class="page-section-title"><text>flex-direction: row</text></view>
@@ -21,9 +21,9 @@
                 </view>
             </view>
         </view>
-    </c-scroller>
+    </scroller>
   </view>
-</c-page>
+</page>
 </template>
 <script>
   import cml from 'chameleon-api'
@@ -92,9 +92,6 @@ export default new View();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header",
-            "c-scroller": "/components/scroller/scroller"
         },
         "navigationBarTitleText": "index",
         "backgroundTextStyle": "dark",

@@ -1,7 +1,7 @@
 <template>
-<c-page title="scroller">
+<page title="scroller">
     <view class="container">
-    <c-scroller
+    <scroller
         scroll-direction="{{scrollDirection}}"
         bottom-offset="{{bottomOffset}}"
         height="{{-1}}"
@@ -10,7 +10,7 @@
         scroll-top="{{scrollTop}}"
         cstyle="width:750cpx"
     >
-        <c-header title="scroller"></c-header>
+        <header title="scroller"></header>
         <view
             class="cell"
             c-for="{{panels}}"
@@ -23,9 +23,9 @@
                 <text class="text">{{item.label}}</text>
             </view>
         </view>
-    </c-scroller>
+    </scroller>
     </view>
-</c-page>
+</page>
 </template>
 <script>
 import cml from "chameleon-api"
@@ -136,9 +136,6 @@ export default new Scroller();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header",
-            "c-scroller": "/components/scroller/scroller"
         },
         "navigationBarTitleText": "scroller",
         "backgroundTextStyle": "dark",

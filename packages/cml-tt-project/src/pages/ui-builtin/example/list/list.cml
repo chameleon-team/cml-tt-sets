@@ -1,7 +1,7 @@
 <template>
-<c-page title="list">
+<page title="list">
   <view class="list-eg">
-    <c-list
+    <list
         bottom-offset="{{bottomOffset}}"
         c-bind:scrolltobottom="onBottom"
         c-bind:onscroll="onScroll"
@@ -10,7 +10,7 @@
         cstyle="width: 750cpx;"
       >
         <cell>
-          <c-header title="list"></c-header>
+          <header title="list"></header>
         </cell>
           <cell
             ref="cell{{i+1}}"
@@ -25,9 +25,9 @@
               <text class="text">{{item}}</text>
             </view>
           </cell>
-      </c-list>
+      </list>
   </view>
-</c-page>
+</page>
 </template>
 <script>
 import cml from 'chameleon-api';
@@ -124,9 +124,6 @@ export default new List();
 {
     "base": {
         "usingComponents": {
-            "c-page": "/components/page/page",
-            "c-header": "../../components/header/header",
-            "c-list": "/components/list/list"
         },
         "navigationBarTitleText": "list",
         "backgroundTextStyle": "dark",
