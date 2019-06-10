@@ -1,6 +1,5 @@
 <template>
   <view class="scroller-wrap">
-  
     <view><text data-page="/pages/api/api" bindtap="gotoPage">gotoApiPage</text></view>
     <view><text data-page="/pages/plugin/plugin" bindtap="gotoPage" >gotoPluginPage</text></view>
     <view><text data-page="/pages/runtime/runtime" bindtap="gotoPage" >gotoRuntimePage</text></view>
@@ -11,6 +10,7 @@
 
 <script>
 import cml from 'cml-tt-api';
+console.log(process.env.media);
 class Index  {
   data = {
     name: 'Chameleon'
@@ -61,6 +61,7 @@ export default new Index();
   flex-direction: column;
   align-items: center;
 }
+
 
 </style>
 <script cml-type="json">
