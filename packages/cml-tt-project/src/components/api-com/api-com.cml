@@ -1,6 +1,6 @@
 <template>
   <view class="api-com">
-    <cml-com></cml-com>
+    <poly-com></poly-com>
   </view>
 </template>
 
@@ -65,7 +65,7 @@ export default new ApiCom();
 {
   "base": {
     "usingComponents": {
-      "cml-com": "../cml-com/cml-com"
+      "poly-com": "../poly-com/poly-com"
     }
   }
 }

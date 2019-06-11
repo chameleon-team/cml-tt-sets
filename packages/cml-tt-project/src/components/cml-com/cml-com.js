@@ -221,7 +221,8 @@ Component({
     },
     request: function(){
       cml.request({
-        url: 'https://pianku.api.mgtv.com/rider/module/tags',
+        domain: process.env.domain.domain1,
+        url: '/api/getMessage',
         data: {
           a: 1
         },
@@ -233,7 +234,8 @@ Component({
       })
 
       cml.get({
-        url: 'https://pianku.api.mgtv.com/rider/module/tags'
+        domain: process.env.domain.domain2,
+        url: '/api/getMessage'
       }).then(res => {
         console.log(res)
       }, err => {
@@ -241,7 +243,8 @@ Component({
       })
 
       cml.post({
-        url: 'https://cml.com/api/user/update',
+        domain: process.env.domain.domain3,
+        url: '/api/getMessage',
         data: {
           a: 1
         }

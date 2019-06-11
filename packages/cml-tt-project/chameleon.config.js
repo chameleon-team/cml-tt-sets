@@ -6,7 +6,7 @@ const apiPrefix = 'https://api.chameleon.com';
 const path = require('path');
 
 cml.config.merge({
-  // enableLinter: false,
+  enableLinter: false,
   templateLang: "cml",
   templateType: "html",
   builtinNpmName: 'cml-tt-ui-builtin',
@@ -23,6 +23,23 @@ cml.config.merge({
   platforms: ['tt'],
   buildInfo: {
     wxAppId: '123456'
+  },
+  base: {
+    dev: {
+      domain: {
+        domain1: "localhost",
+        domain2: "localhost",
+        domain3: "localhost"
+      },
+    },
+    build: {
+      domain: {
+        domain1: "http://api.cml.com",
+        domain2: "http://api2.cml.com",
+        domain3: "http://api3.cml.com"
+  
+      },
+    },
   },
   tt: {
     dev: {
