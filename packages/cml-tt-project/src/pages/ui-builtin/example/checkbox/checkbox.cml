@@ -1,6 +1,5 @@
 <template>
 <page title="checkbox演示">
-  <header title="checkbox"></header>
   <view class="title"><text>Checkbox</text></view>
     <view class="box">
       <checkbox 

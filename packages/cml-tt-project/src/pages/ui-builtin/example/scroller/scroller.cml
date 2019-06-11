@@ -10,7 +10,6 @@
         scroll-top="{{scrollTop}}"
         cstyle="width:750cpx"
     >
-        <header title="scroller"></header>
         <view
             class="cell"
             c-for="{{panels}}"

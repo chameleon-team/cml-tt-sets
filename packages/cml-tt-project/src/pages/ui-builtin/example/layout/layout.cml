@@ -1,7 +1,6 @@
 <template>
 <page title="layout演示">
   <scroller height="{{-1}}">
-    <header title="{{headerTitle}}" desc="{{headerDesc}}"></header>
     <view class="title"><text >以下是demo</text></view>
     <!-- 1 -->
     <view class="container-wrap">

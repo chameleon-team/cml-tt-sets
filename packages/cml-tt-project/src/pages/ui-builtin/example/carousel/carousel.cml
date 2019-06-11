@@ -1,6 +1,5 @@
 <template>
   <page title="carousel">
-    <header title="carousel"></header>
     <carousel class="container" indicator-dots="{{true}}"  current="{{0}}" circular="{{true}}" autoplay="{{true}}" interval="{{2000}}">
       <carousel-item>
         <view  class="carousel-item" style="background-color: #EBDEAA"></view>

@@ -2,7 +2,6 @@
 <page title="view">
   <view class="page-demo">
     <scroller height="{{-1}}">
-      <header title="view"></header>
         <view class="page-box">
             <view class="page-section">
                 <view class="page-section-title"><text>flex-direction: row</text></view>

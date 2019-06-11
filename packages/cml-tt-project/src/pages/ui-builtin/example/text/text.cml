@@ -1,7 +1,6 @@
 <template>
 <page title="text">
   <view class="page-demo">
-    <header title="text"></header>
       <view class="text-area">
         <view c-for="{{addLine}}" c-key="{{item}}">
           <text class="line-text">{{item}}</text>

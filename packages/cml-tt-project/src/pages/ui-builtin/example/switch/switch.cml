@@ -1,6 +1,5 @@
 <template>
 <page title="switch演示">
-  <header title="switch"></header>
     <view class="box">
       <switch
         checked="{{ switchValue1 }}"

@@ -1,5 +1,6 @@
 <template>
-    <textareademo></textareademo>
+    <!-- <textareademo></textareademo> -->
+    <view>123</view>
 </template>
 <script>
     export default {};
@@ -11,7 +12,6 @@
 {
     "base": {
         "usingComponents": {
-            "textareademo": "../../components/textareademo/textareademo"
         },
         "navigationBarTitleText": "textarea",
         "backgroundTextStyle": "dark",

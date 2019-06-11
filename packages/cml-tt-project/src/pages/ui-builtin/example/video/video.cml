@@ -1,7 +1,6 @@
 <template>
 <page title="video">
   <view class="container">
-    <header title="video"></header>
       <text>视频state: </text>
       <text class="info">{{state}}</text>
       <video

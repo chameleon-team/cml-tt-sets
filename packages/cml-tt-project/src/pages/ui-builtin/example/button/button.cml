@@ -16,7 +16,6 @@
           <text style="color:blue">确定</text>
         </button>
       </view>
-      <header title="button"></header>
       <view class="section-title">
         <text class="section-title-text">类型样式</text>
       </view>
@@ -105,7 +104,7 @@ class Button   {
 export default new Button();
 </script>
 <style scoped>
-@import "../../../assets/css/var.less";
+@import "../../../../assets/css/var.less";
 .g-main-btn {
   /* background-color: red; */
 }

@@ -1,6 +1,5 @@
 <template>
 <page title="radio演示">
-  <header title="radio"></header>
   <view class="box">
     <radio
       checked="{{ radioValue1 }}"

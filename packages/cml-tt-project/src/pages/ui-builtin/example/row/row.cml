@@ -1,6 +1,5 @@
 <template>
 <page title="row演示">
-    <header title="c-row"></header>
     <row margin="{{100}}">
       <view class="col-item"></view>
       <view class="col-item"></view>

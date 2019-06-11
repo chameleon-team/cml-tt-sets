@@ -2,7 +2,6 @@
 <page title="input">
     <view class="page-demo">
         <scroller height="{{-1}}">
-            <header title="input"></header>
             <text class="title-text" >focus聚焦 web端不支持</text>
             <view class="input-wrap">
                 <input cstyle="width:200cpx;" placeholder="focus聚焦 web端不支持" focus="{{isfocus}}" c-bind:blur="bindblurevent" c-bind:focus="bindfocusevent" c-bind:input="bindinputevent" c-bind:confirm="bindconfirmevent"></input>

@@ -1,7 +1,6 @@
 <template>
 <page title="richtext">
   <view class="container">
-    <header title="richtext"></header>
     <richtext rich-data="{{richData}}" style="width: 200cpx; height: 100cpx;"></richtext>
   </view>
 </page>

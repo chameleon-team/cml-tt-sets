@@ -10,7 +10,6 @@
         cstyle="width: 750cpx;"
       >
         <cell>
-          <header title="list"></header>
         </cell>
           <cell
             ref="cell{{i+1}}"
