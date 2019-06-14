@@ -13,8 +13,12 @@
     "postcss": "^7.0.14"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive --reporter spec"
   },
   "author": "Chameleon-Team",
-  "license": "Apache"
+  "license": "Apache",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
 }
