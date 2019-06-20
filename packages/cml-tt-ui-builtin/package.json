@@ -9,6 +9,7 @@
   "license": "Apache",
   "main": "/package/components",
   "dependencies": {
-    "chameleon-ui-builtin": "^0.4.0-mvvm.3"
+    "chameleon-ui-builtin": "^0.4.0-mvvm.3",
+    "cml-tt-api": "0.0.1"
   }
 }

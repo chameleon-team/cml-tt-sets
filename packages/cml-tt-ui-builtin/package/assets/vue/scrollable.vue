@@ -12,7 +12,7 @@
 import CScroll from 'chameleon-scroll'
 import {cmlStyleTransfer} from '../js/utils/utils';
 import collectSlotRefs from '../js/mixins/collectSlotRefs/collectSlotRefs'
-import cml from 'chameleon-api';
+import cml from 'cml-tt-api';
 
 export default {
   mixins: [collectSlotRefs],

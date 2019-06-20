@@ -4,7 +4,7 @@
   </view>
 </template>
 <script>
-import cml from 'chameleon-api';
+import cml from 'cml-tt-api';
 class CPage implements CPageInterface {
   props = {
     title: {
