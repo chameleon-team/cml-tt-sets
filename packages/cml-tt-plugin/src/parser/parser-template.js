@@ -1,5 +1,4 @@
 const {cmlparse, generator, types: t, traverse} = require('mvvm-template-parser');
-const { trimCurly, getModelKey, modelEventProxyName, trim, isInlineStatementFn } = require('../util');
 const parserTag = require('./parser-tag');
 const parserEvent = require('./parser-event');
 const parserClass = require('./parser-class');
