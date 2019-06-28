@@ -26,7 +26,6 @@ data = {
     console.log('brefore Mount');
   }
   mounted() {
-    debugger
     console.log('mounted');
     setTimeout(() => {
       this.name="22222"
