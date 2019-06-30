@@ -28,11 +28,6 @@
       "name": "runtime"
     },
     {
-      "url": "/cml/h5/ui-builtin/view",
-      "path": "/pages/ui-builtin/view",
-      "name": "view"
-    },
-    {
       "name": "list",
       "url": "/pages/ui-builtin/example/list/list",
       "path": "/pages/ui-builtin/example/list/list",
