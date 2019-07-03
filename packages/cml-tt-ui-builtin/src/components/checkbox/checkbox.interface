@@ -1,16 +1,1 @@
-<script cml-type="interface">
-type EventDetail = {
-  value: Boolean,
-  index: Number
-}
-interface CheckboxInterface {
-  checked: Boolean,
-  label: String,
-  disabled: Boolean,
-  position: String,
-  groupIndex: Number,
-  change(eventDetail: EventDetail): void;
-  changeevent(eventDetail: EventDetail): void;
-}
-</script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./checkbox.cml"></script>
+<include src="chameleon-ui-builtin/components/checkbox/checkbox.interface"></include>

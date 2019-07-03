@@ -1,4 +1,1 @@
-<script cml-type="interface">
-interface CCarouselItemInterface {
-}
-</script>
+<include src="chameleon-ui-builtin/components/carousel-item/carousel-item.interface"></include>

@@ -3,6 +3,8 @@
     <text>Hello {{name}}!</text>
     <text>计算属性: {{computeName}}!</text>
     <text>计算属性: {{computeName}}!</text>
+    <proptest val1="val1"></proptest>
+    
     </view>
 </template>
 
@@ -53,7 +55,9 @@ export default new Runtime();
 <script cml-type="json">
 {
   "base": {
-    "usingComponents": {}
+    "usingComponents": {
+      "proptest": "../../components/proptest/proptest"
+    }
   },
   "wx": {
     "navigationBarTitleText": "index",
