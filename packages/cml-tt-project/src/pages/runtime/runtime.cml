@@ -3,6 +3,7 @@
     <text>Hello {{name}}!</text>
     <text>计算属性: {{computeName}}!</text>
     <text>计算属性: {{computeName}}!</text>
+
     </view>
 </template>
 

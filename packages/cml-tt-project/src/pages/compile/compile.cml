@@ -1,0 +1,126 @@
+<template>
+   <view>
+    <view>测试c-if  c-else-if  c-else</view>
+    <view c-if="{{true}}">this is c-if => true </view>
+    <view c-else>this is c-else => true </view>
+    <view>测试 c-model</view>
+    <input type="text" c-model="{{value}}"/>
+    <text>{{value}}</text>
+    <view >测试事件绑定</view>
+    <view c-bind:click="handleClick">单纯事件绑定</view>
+    <view c-bind:click="handleClick(1,2)">事件内联传参</view>
+    <view c-bind:click="handleClick($event,1,2)">事件内联传参</view>
+    <view class="outer" c-bind:tap="handleTap1">
+      <view class="inner" c-bind:tap="handleTap2"></view>
+    </view>
+    <view class="outer" c-bind:tap="handleTap1">
+      <view class="inner" c-catch:tap="handleTap2">catch</view>
+    </view>
+    <view>测试样式和style</view>
+    <view class="{{computedClass}} cls2">测试class</view>
+    <view style="width:200cpx;height:100cpx;background-color:green">测试style</view>
+   </view>
+
+</template>
+
+<script>
+class Compile   {
+
+  data = {
+    value:"s"
+  }
+
+  computed = {
+    computedClass(){
+      return 'cls1'
+    }
+  }
+
+  watch  = {
+  }
+
+  methods = {
+    handleClick(...args){
+      console.log('handleClick',args);
+    },
+    handleTap1(){
+      console.log('handleTapouter')
+    },
+    handleTap2(){
+      console.log('handleTapinner')
+    },
+  }
+
+  beforeCreate() {
+  }
+
+  created() {
+  }
+
+  beforeMount() {
+  }
+
+  mounted() {
+  }
+
+  beforeDestroy() {
+  }
+
+  destroyed() {
+  }
+}
+
+export default new Compile();
+</script>
+
+<style>
+.cls1{
+  width:100cpx;
+  height:200cpx;
+
+}
+.cls2{
+  background-color:aqua;
+}
+.outer{
+  width:300cpx;
+  height:300cpx;
+  background-color:beige;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner{
+  width:100cpx;
+  height:100cpx;
+  background-color:aqua;
+}
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {}
+  },
+  "wx": {
+    "navigationBarTitleText": "index",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#E2E2E2"
+  },
+  "alipay": {
+    "defaultTitle": "index",
+    "pullRefresh": false,
+    "allowsBounceVertical": "YES",
+    "titleBarColor": "#ffffff"
+  },
+  "baidu": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "index",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  }
+}
+</script>
