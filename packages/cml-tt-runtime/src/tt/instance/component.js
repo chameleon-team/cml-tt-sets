@@ -31,7 +31,9 @@ export class CmlComponent extends BaseCtor {
             .start('component-view-render')
         },
         ready() {
-
+          // runtimeCore
+          //   .setContext(this)
+          //   .initRefs()
         },
         detached() {
           // stop

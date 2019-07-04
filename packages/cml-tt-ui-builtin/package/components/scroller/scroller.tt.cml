@@ -100,7 +100,7 @@
     mounted () {
       setTimeout(async() => {
         if (this.scrollDirection === 'vertical' && !this.height) {
-          console.error('纵向滚动必须传递高度属性')
+          console.error('纵向滚动必须传递高度属性111')
           return
         }
         if (this.scrollDirection !== 'vertical' && !this.width) {

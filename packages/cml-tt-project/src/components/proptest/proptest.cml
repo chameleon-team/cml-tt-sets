@@ -2,7 +2,7 @@
   <view>
     <text>proptest component</text>
     <view>------</view>
-    <text>{{val1}}</text>
+    <text>{{val}}</text>
     </view>
 </template>
 
@@ -10,9 +10,12 @@
 
 class Proptest {
   props = {
-    val1: String,
+    val: {
+      type:String,
+      default:'origin-str'
+    },
     propsCheck: {
-       type:Object,
+      type:Object,
       default: {}
     }
   }
@@ -38,6 +41,7 @@ class Proptest {
   }
 
   mounted() {
+    debugger
   }
 
   beforeDestroy() {
@@ -46,8 +50,9 @@ class Proptest {
   destroyed() {
   }
 }
-
+debugger
 export default new Proptest();
+
 </script>
 <style>
 

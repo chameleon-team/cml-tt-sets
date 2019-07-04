@@ -342,7 +342,6 @@ class MiniVmAdapter extends BaseVmAdapter {
   transformProperties () {
     let originProperties = this.options[this.propsName]
     const newProps = {}
-    
     enumerableKeys(originProperties).forEach(key => {
       const rawFiled = originProperties[key]
       

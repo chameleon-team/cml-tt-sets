@@ -5,6 +5,7 @@
     <view><text data-page="/pages/runtime/runtime" bindtap="gotoPage" >gotoRuntimePage</text></view>
     <view><text data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
     <view><text data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
+    <view><text data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
   </view>
 </template>
 
