@@ -4,7 +4,7 @@ import apiInterface from './api.interface'
 const instanceAPI = apiInterface.getInstance()
 
 const KEY = {
-  wx: {
+  tt: {
     instance: instanceAPI,
     props: 'properties'
   }

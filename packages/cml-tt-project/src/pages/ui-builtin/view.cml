@@ -1,24 +1,12 @@
 <template>
 <page title="view">
   <view class="page-demo">
-        <view class="page-box">
-            <view class="page-section">
-                <view class="page-section-title"><text>flex-direction: row</text></view>
-                <view class="page-section-content" style="flex-direction: row">          
-                    <view class="flex-item demo-1"><text>I</text></view>
-                    <view class="flex-item demo-2"><text>II</text></view>
-                    <view class="flex-item demo-3"><text>III</text></view>
-                </view>
-            </view>
-            <view class="page-section">
-                <view class="page-section-title"><text>flex-direction: column</text></view>
-                <view class="page-section-content" style="flex-direction: column">          
-                    <view class="flex-item-V demo-1"><text>I</text></view>
-                    <view class="flex-item-V demo-2"><text>II</text></view>
-                    <view class="flex-item-V demo-3"><text>III</text></view>
-                </view>
-            </view>
-        </view>
+      <view c-for="{{comps}}" 
+        c-bind:click="handleClick" 
+        data-page="{{item.path}}"
+      >
+        {{item.name}}
+      </view>
   </view>
 </page>
 </template>
@@ -27,10 +15,21 @@
   class View   {
 
   data = {
+    comps:[
+      {name:"button",path:"/pages/ui-builtin/example/button/button"},
+      {name:"carousel",path:"/pages/ui-builtin/example/carousel/carousel"},
+      {name:"carousel",path:"/pages/ui-builtin/example/carousel/carousel"},
+    ]
   }
   computed = {}
   watch  = {}
-  methods = {}
+  methods = {
+    handleClick(e){
+      cml.navigateTo({
+        path: e.target.dataset.page
+      })
+    }
+  }
   beforeCreate() {}
   created() {}
   beforeMount() {}

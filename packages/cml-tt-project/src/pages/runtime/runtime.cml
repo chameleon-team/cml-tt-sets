@@ -4,13 +4,13 @@
     <text>计算属性: {{computeName}}!</text>
     <text>计算属性: {{computeName}}!</text>
 
-    <proptest val1="val1"></proptest>
+    <proptest val="val"></proptest>
     
     </view>
 </template>
 
 <script>
-
+//组件接受不到props
 class Runtime   {
 data = {
     name: 'Chameleon'

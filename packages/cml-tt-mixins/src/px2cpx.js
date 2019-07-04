@@ -1,12 +1,12 @@
 const _ = module.exports = {};
+let viewportWidth;
 _.px2cpx = function(px, platform) {
   function getViewportSize() {
-    debugger;
     const { windowWidth } = tt.getSystemInfoSync();
     return windowWidth;
   }
 
-  const viewportWidth = getViewportSize();
+  viewportWidth = viewportWidth || getViewportSize();
   const cpx = +(750 / viewportWidth * px).toFixed(3);
   return cpx;
 }
