@@ -2,10 +2,9 @@
 <page title="view">
   <view class="page-demo">
       <view c-for="{{comps}}" 
-        c-bind:click="handleClick" 
-        data-page="{{item.path}}"
+        c-bind:click="handleClick(item.path)" 
       >
-        {{item.name}}
+        <view class="btn">{{item.name}}</view>
       </view>
   </view>
 </page>
@@ -18,15 +17,28 @@
     comps:[
       {name:"button",path:"/pages/ui-builtin/example/button/button"},
       {name:"carousel",path:"/pages/ui-builtin/example/carousel/carousel"},
-      {name:"carousel",path:"/pages/ui-builtin/example/carousel/carousel"},
+      {name:"checkbox",path:"/pages/ui-builtin/example/checkbox/checkbox"},
+      {name:"image",path:"/pages/ui-builtin/example/image/image"},
+      {name:"input",path:"/pages/ui-builtin/example/input/input"},
+      {name:"layout",path:"/pages/ui-builtin/example/layout/layout"},
+      {name:"list",path:"/pages/ui-builtin/example/list/list"},
+      {name:"radio",path:"/pages/ui-builtin/example/radio/radio"},
+      {name:"richtext",path:"/pages/ui-builtin/example/richtext/richtext"},
+      {name:"row",path:"/pages/ui-builtin/example/row/row"},
+      {name:"scroller",path:"/pages/ui-builtin/example/scroller/scroller"},
+      {name:"switch",path:"/pages/ui-builtin/example/switch/switch"},
+      {name:"text",path:"/pages/ui-builtin/example/text/text"},
+      {name:"textarea",path:"/pages/ui-builtin/example/textarea/textarea"},
+      {name:"video",path:"/pages/ui-builtin/example/video/video"},
+      {name:"view",path:"/pages/ui-builtin/example/view/view"},
     ]
   }
   computed = {}
   watch  = {}
   methods = {
-    handleClick(e){
+    handleClick(path){
       cml.navigateTo({
-        path: e.target.dataset.page
+        path
       })
     }
   }
@@ -82,6 +94,14 @@ export default new View();
 }
 .demo-3 {
   background-color: #e0e0e0;
+}
+.btn{
+  width:750cpx;
+  height:100cpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 <script cml-type="json">

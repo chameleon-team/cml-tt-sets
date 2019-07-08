@@ -3,23 +3,38 @@
     <view>测试c-if  c-else-if  c-else</view>
     <view c-if="{{true}}">this is c-if => true </view>
     <view c-else>this is c-else => true </view>
+    <input type="text" />
     <view>测试 c-model</view>
     <input type="text" c-model="{{value}}"/>
     <text>{{value}}</text>
+    <view>测试 c-show</view>
+    <view c-show="{{show}}">this is show</view>
+    <view c-bind:click="changeShow">toggle-c-show</view>
+    <view>{{show}}</view>
+    <view>测试 c-text</view>
+    <view c-text="{{text}}"></view>
     <view >测试事件绑定</view>
     <view c-bind:click="handleClick">单纯事件绑定</view>
     <view c-bind:click="handleClick(1,2)">事件内联传参</view>
     <view c-bind:click="handleClick($event,1,2)">事件内联传参</view>
     <view class="outer" c-bind:tap="handleTap1">
-      <view class="inner" c-bind:tap="handleTap2"></view>
+      <view class="inner" c-bind:tap="handleTap2">测试事件冒泡</view>
     </view>
     <view class="outer" c-bind:tap="handleTap1">
-      <view class="inner" c-catch:tap="handleTap2">catch</view>
+      <view class="inner" c-catch:tap="handleTap2">阻止事件冒泡</view>
     </view>
     <view>测试样式和style</view>
     <view class="{{computedClass}} cls2">测试class</view>
     <view style="width:200cpx;height:100cpx;background-color:green">测试style</view>
+    <view style="width:{{width}}cpx;height:100cpx;background-color:green">测试动态style</view>
+    <view>测试c-for</view>
+    <view c-for="{{array}}" c-for-index="idx" c-for-item="i">{{i.name+idx}}</view>
+    <view>测试动态组件</view>
+    <component is="{{name}}"></component>
+    <view c-bind:click="changeComponent">changeComponent</view>
+
    </view>
+   
 
 </template>
 
@@ -27,7 +42,15 @@
 class Compile   {
 
   data = {
-    value:"s"
+    value:"s",
+    width:200,
+    show:false,
+    text:"this is c-text",
+    array:[
+      {name:"jim"},
+      {name:"jhon"}
+    ],
+    name:'proptest'
   }
 
   computed = {
@@ -49,6 +72,14 @@ class Compile   {
     handleTap2(){
       console.log('handleTapinner')
     },
+    changeShow(){
+      this.show = !this.show;
+      console.log(this.show)
+    },
+    changeComponent(){
+      this.name = this.name === 'proptest' ? 'proptest2' : 'proptest';
+      console.log('this.name',this.name)
+    }
   }
 
   beforeCreate() {
@@ -100,7 +131,10 @@ export default new Compile();
 <script cml-type="json">
 {
   "base": {
-    "usingComponents": {}
+    "usingComponents": {
+      "proptest":"../../components/proptest/proptest",
+      "proptest2":"../../components/proptest2/proptest2"
+    }
   },
   "wx": {
     "navigationBarTitleText": "index",

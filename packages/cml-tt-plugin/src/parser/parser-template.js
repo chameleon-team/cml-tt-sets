@@ -10,6 +10,7 @@ const parserDynamicComponent = require('./parser-dynamic-component');
 const EMPTYTAG = Symbol('cml-remove-tag');
 
 module.exports = function(content, options = {}) {
+  debugger;
   let ast = cmlparse(content);
   traverse(ast, {
     enter(path) {
