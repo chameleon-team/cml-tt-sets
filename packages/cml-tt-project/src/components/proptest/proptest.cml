@@ -41,7 +41,6 @@ class Proptest {
   }
 
   mounted() {
-    debugger
   }
 
   beforeDestroy() {
@@ -50,7 +49,6 @@ class Proptest {
   destroyed() {
   }
 }
-debugger
 export default new Proptest();
 
 </script>
