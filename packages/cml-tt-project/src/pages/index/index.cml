@@ -1,11 +1,11 @@
 <template>
   <view class="scroller-wrap">
-    <view><text data-page="/pages/api/api" bindtap="gotoPage">gotoApiPage</text></view>
-    <view><text data-page="/pages/plugin/plugin" bindtap="gotoPage" >gotoPluginPage</text></view>
-    <view><text data-page="/pages/runtime/runtime" bindtap="gotoPage" >gotoRuntimePage</text></view>
-    <view><text data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
-    <view><text data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
-    <view><text data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
+    <view><text class="btn" data-page="/pages/api/api" bindtap="gotoPage">gotoApiPage</text></view>
+    <view><text class="btn" data-page="/pages/plugin/plugin" bindtap="gotoPage" >gotoPluginPage</text></view>
+    <view><text class="btn" data-page="/pages/runtime/runtime" bindtap="gotoPage" >gotoRuntimePage</text></view>
+    <view><text class="btn" data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
+    <view><text class="btn" data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
+    <view><text class="btn" data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
   </view>
 </template>
 
@@ -62,7 +62,14 @@ export default new Index();
   flex-direction: column;
   align-items: center;
 }
-
+.btn{
+  width:750cpx;
+  height:100cpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
 
 </style>
 <script cml-type="json">
