@@ -1,7 +1,6 @@
 <template>
 <page title="c-toast演示">
   <view class="container">
-    <c-header title="c-toast"></c-header>
     <c-toast duration="{{duration}}"
             show="{{show}}"
             c-bind:show="changeShow"
@@ -117,7 +116,7 @@ export default new CToast();
 {
     "base": {
         "usingComponents": {
-          "c-toast": "cml-tt-ui/components/c-toast/c-taost"
+          "c-toast": "cml-tt-ui/components/c-toast/c-toast"
         },
         "navigationBarTitleText": "c-toast",
         "backgroundTextStyle": "dark",

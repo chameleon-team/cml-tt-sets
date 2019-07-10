@@ -17,8 +17,21 @@ class Ui   {
 
   data = {
     comps:[
-      {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"},
-      {name:"c-to",path:"/pages/ui/example/c-toast/c-toast"}
+      {name:"c-actionsheet",path:"/pages/ui/example/c-actionsheet/c-actionsheet"},
+      {name:"c-checkbox-group",path:"/pages/ui/example/c-checkbox-group/c-checkbox-group"},
+      {name:"c-dialog",path:"/pages/ui/example/c-dialog/c-dialog"},
+      {name:"c-loading",path:"/pages/ui/example/c-loading/c-loading"},
+      {name:"c-picker",path:"/pages/ui/example/c-picker/c-picker"},
+      {name:"c-picker-date",path:"/pages/ui/example/c-picker-date/c-picker-date"},
+      {name:"c-picker-item",path:"/pages/ui/example/c-picker-item/c-picker-item"},
+      {name:"c-picker-panel",path:"/pages/ui/example/c-picker-panel/c-picker-panel"},
+      {name:"c-popup",path:"/pages/ui/example/c-popup/c-popup"},
+      {name:"c-radio-group",path:"/pages/ui/example/c-radio-group/c-radio-group"},
+      {name:"c-refresh",path:"/pages/ui/example/c-refresh/c-refresh"},
+      {name:"c-tab",path:"/pages/ui/example/c-tab/c-tab"},
+      {name:"c-tabbar",path:"/pages/ui/example/c-tabbar/c-tabbar"},
+      {name:"c-tip",path:"/pages/ui/example/c-toast/c-tip"},
+      {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"}
     ]
   }
 
