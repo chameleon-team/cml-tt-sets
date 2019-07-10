@@ -1,5 +1,13 @@
 <template>
-  <view><text>Hello Chameleon!</text></view>
+  <page title="view">
+    <view class="page-demo">
+        <view c-for="{{comps}}" 
+          c-bind:click="handleClick(item.path)" 
+        >
+          <view class="btn">{{item.name}}</view>
+        </view>
+    </view>
+  </page>
 </template>
 
 <script>
@@ -7,6 +15,9 @@
 class Ui   {
 
   data = {
+    comps:[
+      {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"}
+    ]
   }
 
   computed = {
