@@ -12,7 +12,7 @@
 
 </template>
 <script>
-import cml from 'cml-tt-api'
+import cml from 'chameleon-api'
  class CRefresh implements CRefreshInterface {
     props = {
       display: {

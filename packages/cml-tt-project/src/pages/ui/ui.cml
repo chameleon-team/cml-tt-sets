@@ -11,12 +11,14 @@
 </template>
 
 <script>
+import cml from 'cml-tt-api'
 
 class Ui   {
 
   data = {
     comps:[
-      {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"}
+      {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"},
+      {name:"c-to",path:"/pages/ui/example/c-toast/c-toast"}
     ]
   }
 
@@ -27,6 +29,11 @@ class Ui   {
   }
 
   methods = {
+    handleClick(path){
+      cml.navigateTo({
+        path
+      })
+    }
   }
 
   beforeCreate() {
@@ -52,7 +59,56 @@ export default new Ui();
 </script>
 
 <style>
-
+.page-demo {
+   background: #f8f8f8;
+   flex: 1;
+ }
+.page-box {
+  margin-top: 80cpx;
+}
+.page-section-title {
+  font-size: 32cpx;
+  margin: 0 30cpx;
+}
+.page-section-content {
+  margin: 80cpx;
+  display: flex;
+  font-size: 32cpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item {
+  width: 200cpx;
+  height: 300cpx;
+  line-height: 300cpx;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item-V {
+  width: 300cpx;
+  height: 200cpx;
+  line-height: 200cpx;
+  justify-content: center;
+  align-items: center;
+}
+.demo-1 {
+  background-color: #81c0c0;
+}
+.demo-2 {
+  background-color: #97cbff;
+}
+.demo-3 {
+  background-color: #e0e0e0;
+}
+.btn{
+  width:750cpx;
+  height:100cpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 <script cml-type="json">

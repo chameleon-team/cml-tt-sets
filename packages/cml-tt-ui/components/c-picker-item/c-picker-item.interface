@@ -9,15 +9,18 @@
 以事件名称为key值给interface定义属性，该属性是一个函数类型，返回值为void，
 定义函数的第一个参数为自定义事件传递的detail对象类型
 */
-type valueDetail = {
-  value: Boolean
-}
+
 //定义事件detail对象的参数
-interface CRefreshInterface {
-  display: Boolean,
-  direction: String,
-  customUi: Boolean,
-  refreshevent(eventDetail: valueDetail): void;
-  refresh(eventDetail: valueDetail): void;
+type EventDetail = {
+  index: Number
+}
+type ArrayType = [String]
+interface CPickerItemInterface {
+  list: ArrayType,
+  defaultIndex: Number,
+  height: Number,
+  textAlign: String,
+  itemStyle:String,
+  selectchange(eventDetail: EventDetail): void;
 }
 </script>
