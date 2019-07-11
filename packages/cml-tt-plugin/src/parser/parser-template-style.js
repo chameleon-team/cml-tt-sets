@@ -2,7 +2,6 @@ const wxStaticStyleHandle = require('chameleon-css-loader/proxy/proxyMiniapp.js'
 const utils = require('../util.js')
 module.exports = function(context){
   let {attr} = context;
-  debugger;
   if(attr.name && attr.name.name === 'style'){ //只有是style属性的时候才处理
     let styleNode = attr;
     if (styleNode && styleNode.value && utils.isMustacheReactive(styleNode.value.value)) {// 动态的style  cpx转化成rpx

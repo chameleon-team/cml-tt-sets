@@ -8,7 +8,7 @@ module.exports = class TouTiaoPlugin {
     let { cmlType, media} = options;
     this.webpackRules = []; // webpack的rules设置  用于当前端特殊文件处理
     this.moduleRules = []; // 文件后缀对应的节点moduleType  
-    this.logLevel = 3;
+    // this.logLevel = 3;
     this.originComponentExtList = ['.ttml']; // 用于扩展原生组件的文件后缀查找
     this.runtimeNpmName = 'cml-tt-runtime';
     this.runtimeNeedComponents = false; 
@@ -86,6 +86,7 @@ module.exports = class TouTiaoPlugin {
        * parentNodeType 父节点的nodeType
        */
       compiler.hook('compile-style', function(currentNode, parentNodeType) {
+        debugger;
         currentNode.output = styleParser(currentNode.source);
       })
 
