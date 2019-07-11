@@ -4,7 +4,7 @@
         <text class="layer-header-title-text">{{title}}</text>
       </view>
       <view class="layer-header-cancel" c-bind:tap="cancelclick">
-        <image src="{{cancelImage}}" style="width: 36cpx;height: 36cpx"></image>
+        <image src="{{cancelImage}}" style="width: 36cpx;height: 36cpx;vertical-align: -18cpx"></image>
       </view>
   </view>
 </template>
@@ -67,10 +67,11 @@ export default new LayerHeader();
 </script>
 <style scoped lang="less">
 .layer-header {
+  display: flex;
   background: #FFFFFF;
   width:750cpx;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ECEDF0;
   &-title{
     font-size: 40cpx;

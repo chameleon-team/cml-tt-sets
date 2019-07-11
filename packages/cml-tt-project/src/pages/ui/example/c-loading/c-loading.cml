@@ -50,14 +50,14 @@ export default new CLoading();
 <style scoped>
 .content {
     width: 750cpx;
-    height: 300cpx;
-    background-color: peru;
 }
 .button-wrapper {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
     flex: 1;
     justify-content: center;
     align-items: center;
-    margin-top: 50cpx;
 }
 .loading {
 }

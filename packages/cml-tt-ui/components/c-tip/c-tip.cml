@@ -96,7 +96,7 @@ class CTip implements CTipInterface {
       switch (this.direction) {
         case 'top':
           if (this.offsetLeft || this.offsetRight) {
-            style =  `position: absolute; bottom: 0;width: 32cpx; height: 16cpx;`;
+            style =  `position: absolute; bottom: 0;width: 0; height: 16cpx;`;
             if( this.offsetLeft) {
               style = style + `left:${this.offsetLeft}cpx;`
             }
@@ -104,12 +104,12 @@ class CTip implements CTipInterface {
               style = style + `right:${this.offsetRight}cpx;`
             }
           } else {
-            style = `width: 32cpx; height: 16cpx;`;
+            style = `width: 0; height: 16cpx;`;
           }
           break;
         case 'right':
           if (this.offsetTop || this.offsetBottom) {
-            style =  `position: absolute; left: 0;width: 16cpx; height: 32cpx;`;
+            style =  `position: absolute; left: 0;width: 16cpx; height: 0;`;
             if( this.offsetTop) {
               style = style + `top:${this.offsetTop}cpx;`
             }
@@ -117,12 +117,12 @@ class CTip implements CTipInterface {
               style = style + `bottom:${this.offsetBottom}cpx;`
             }
           } else {
-            style = `width: 16cpx; height: 32cpx;`;
+            style = `width: 16cpx; height: 0;`;
           }
           break;
         case 'bottom':
           if (this.offsetLeft || this.offsetRight) {
-            style =  `position: absolute; top: 0;width: 32cpx; height: 16cpx;`;
+            style =  `position: absolute; top: 0;width: 0; height: 16cpx;`;
             if( this.offsetLeft) {
               style = style + `left:${this.offsetLeft}cpx;`
             }
@@ -130,12 +130,12 @@ class CTip implements CTipInterface {
               style = style + `right:${this.offsetRight}cpx;`
             }
           } else {
-            style = `width: 32cpx; height: 16cpx;`;
+            style = `width: 0; height: 16cpx;`;
           }
           break;
         case 'left':
           if (this.offsetTop || this.offsetBottom) {
-            style =  `position: absolute; right: 0;width: 16cpx; height: 32cpx;`;
+            style =  `position: absolute; right: 0;width: 16cpx; height: 0;`;
             if( this.offsetTop) {
               style = style + `top:${this.offsetTop}cpx;`
             }
@@ -143,7 +143,7 @@ class CTip implements CTipInterface {
               style = style + `bottom:${this.offsetBottom}cpx;`
             }
           } else {
-            style = `width: 16cpx; height: 32cpx;`;
+            style = `width: 16cpx; height: 0;`;
           }
           break;
       }

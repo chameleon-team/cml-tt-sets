@@ -30,7 +30,7 @@ class Ui   {
       {name:"c-refresh",path:"/pages/ui/example/c-refresh/c-refresh"},
       {name:"c-tab",path:"/pages/ui/example/c-tab/c-tab"},
       {name:"c-tabbar",path:"/pages/ui/example/c-tabbar/c-tabbar"},
-      {name:"c-tip",path:"/pages/ui/example/c-toast/c-tip"},
+      {name:"c-tip",path:"/pages/ui/example/c-tip/c-tip"},
       {name:"c-toast",path:"/pages/ui/example/c-toast/c-toast"}
     ]
   }
