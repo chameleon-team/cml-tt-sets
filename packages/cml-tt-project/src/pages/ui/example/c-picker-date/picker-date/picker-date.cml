@@ -155,10 +155,12 @@ export default new PickerDate();
   background-color: #fff;
 }
 .content{
+  display: flex;
   margin-bottom: 68cpx;
   margin-top: 36cpx
 }
 .bottom{
+  display: flex;
   height: 100cpx;
   width: 670cpx;
   background-color: #474D66;
