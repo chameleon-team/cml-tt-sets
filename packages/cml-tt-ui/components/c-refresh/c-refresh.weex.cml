@@ -17,7 +17,7 @@
 </origin-loading>
 </template>
 <script>
-import cml from 'chameleon-api'
+import cml from 'cml-tt-api'
  class CRefresh implements CRefreshInterface {
     props = {
       display: {
@@ -45,7 +45,7 @@ import cml from 'chameleon-api'
     }
     data = {
       refreshing: false,
-      icon: require('./images/loading.gif')
+      icon: require('../../assets/images/loading.gif')
     }
 
     methods = {

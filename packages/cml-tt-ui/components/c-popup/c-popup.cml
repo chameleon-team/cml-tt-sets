@@ -8,7 +8,7 @@
 </view>
 </template>
 <script>
-import cml from 'chameleon-api';
+import cml from 'cml-tt-api';
 const createAnimation = cml.createAnimation;
 
 class CPopup implements CPopupInterface {

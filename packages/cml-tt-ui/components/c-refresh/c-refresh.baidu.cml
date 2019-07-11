@@ -27,7 +27,7 @@
       }
     }
     data = {
-      icon: require('./images/loading.gif')
+      icon: require('../../assets/images/loading.gif')
     }
 
     watch = {

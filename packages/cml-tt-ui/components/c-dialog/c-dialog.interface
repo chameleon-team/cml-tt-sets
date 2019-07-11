@@ -24,4 +24,4 @@ interface CDialogInterface {
   close(eventDetail: void): void;
 }
 </script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./c-dialog.cml"></script>
+<script cml-type="web,weex,baidu,wx,alipay,tt" src="./c-dialog.cml"></script>

@@ -37,7 +37,7 @@ class CToast implements CToastInterface {
   data = {
     transitionStyle: "",
     IconMap: {
-      loading: require("./images/loading.gif"),
+      loading: require("../../assets/images/loading.gif"),
       success: require("./images/succ.png"),
       warn: require("./images/warn.png")
     }

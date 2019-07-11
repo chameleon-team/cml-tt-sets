@@ -20,7 +20,7 @@
 </template>
 <script type="text/javascript">
 import { cmlStyleTransfer,pxTransform } from '../../../assets/js/util'
-import cml from "chameleon-api"
+import cml from "cml-tt-api"
 // const createAnimation = cml.createAnimation;
 const getIndex = (list, item) => {
   if (list && list.length < 1) {
