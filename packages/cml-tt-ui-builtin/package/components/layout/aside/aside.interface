@@ -1,7 +1,1 @@
-<script cml-type="interface">
-
-interface AsideInterface {
-  asideStyle: String,
-}
-</script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./aside.cml"></script>
+<include src="chameleon-ui-builtin/components/layout/aside/aside.interface"></include>
