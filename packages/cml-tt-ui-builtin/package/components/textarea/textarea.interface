@@ -1,2 +1,2 @@
 <include src="chameleon-ui-builtin/components/textarea/textarea.interface"></include>
-<script cml-type="wx,tt" src="./textarea.tt.cml"></script>
+<script cml-type="tt" src="./textarea.tt.cml"></script>

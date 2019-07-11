@@ -1,2 +1,2 @@
 <include src="chameleon-ui-builtin/components/layout/aside/aside.interface"></include>
-<script cml-type="wx,tt" src="./aside.tt.cml"></script>
+<script cml-type="tt" src="./aside.tt.cml"></script>
