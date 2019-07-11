@@ -25,7 +25,7 @@
     </view>
     <view>测试样式和style</view>
     <view class="{{computedClass}} cls2">测试class</view>
-    <view style="width:200cpx;height:100cpx;background-color:green">测试style</view>
+    <view style="width:200px;height:100cpx;background-color:green">测试style</view>
     <view style="width:{{width}}cpx;height:100cpx;background-color:green">测试动态style</view>
     <view>测试c-for</view>
     <view c-for="{{array}}" c-for-index="idx" c-for-item="i">{{i.name+idx}}</view>

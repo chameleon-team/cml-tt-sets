@@ -14,7 +14,8 @@ import cml from 'cml-tt-api';
 console.log(process.env.media);
 class Index  {
   data = {
-    name: 'Chameleon'
+    name: 'Chameleon',
+    height:'200cpx;bakcground-color:red'
   }
   methods = {
     gotoPage(e) {
@@ -63,12 +64,14 @@ export default new Index();
   align-items: center;
 }
 .btn{
-  width:750cpx;
+  width:400cpx;
   height:100cpx;
   display:flex;
   flex-direction:row;
   justify-content: center;
   align-items: center;
+  border-radius:20cpx;
+  background-color:aquamarine;
 }
 
 </style>

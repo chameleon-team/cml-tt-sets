@@ -1,0 +1,14 @@
+<include src="chameleon-api/src/interfaces/open/index.interface"></include>
+
+<script cml-type="tt">
+
+class Method implements openPageInterface {
+  open() {
+  }
+}
+
+export default new Method();
+
+</script>
+
+

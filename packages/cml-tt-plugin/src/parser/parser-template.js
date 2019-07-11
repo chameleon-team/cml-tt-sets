@@ -5,7 +5,7 @@ const parserClass = require('./parser-class');
 const parserDirective = require('./parser-directive');
 const parserAnimationTag = require('./parser-animation');
 const parserDynamicComponent = require('./parser-dynamic-component');
-
+const parserTemplateStyle = require('./parser-template-style.js');
 // 标记此attr需要被替换或者是单纯的删除
 const EMPTYTAG = Symbol('cml-remove-tag');
 
@@ -26,7 +26,8 @@ module.exports = function(content, options = {}) {
           parserDirective(context);
           // 动态组件
           parserDynamicComponent(context);
-
+          //处理style 包括动态或者静态style的cpx ==> rpx的转化
+          parserTemplateStyle(context)
           // c-bind,c-catch 事件处理
           parserEvent(context);
 
@@ -42,6 +43,6 @@ module.exports = function(content, options = {}) {
       }
     }
   });
-  
+  debugger;
   return generator(ast).code;
 }

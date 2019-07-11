@@ -1,7 +1,7 @@
 <template>
 <page title="image">
     <view class="container">
-        <image src="{{imageSrc}}" style="width: 682cpx;height:600cpx;" c-bind:load="imageLoad" c-bind:error="imageError"></image>
+        <image src="{{imageSrc}}" style="width: 382cpx;height:600cpx;" c-bind:load="imageLoad" c-bind:error="imageError"></image>
     </view>
 </page>
 </template>
