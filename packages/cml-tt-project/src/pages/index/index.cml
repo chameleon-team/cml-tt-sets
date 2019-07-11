@@ -6,6 +6,7 @@
     <view><text class="btn" data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
     <view><text class="btn" data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
     <view><text class="btn" data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
+    <view><text class="btn" data-page="/pages/store/store" bindtap="gotoPage" >goto-store</text></view>
   </view>
 </template>
 

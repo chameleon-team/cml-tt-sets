@@ -217,6 +217,12 @@
       "url": "/pages/ui/example/c-tip/c-tip",
       "path": "/pages/ui/example/c-tip/c-tip",
       "mock": "index.php"
+    },
+    {
+      "name": "store",
+      "url": "/pages/store/store",
+      "path": "/pages/store/store",
+      "mock": "index.php"
     }
   ]
 }
