@@ -86,6 +86,7 @@ module.exports = class TouTiaoPlugin {
        * parentNodeType 父节点的nodeType
        */
       compiler.hook('compile-style', function(currentNode, parentNodeType) {
+        debugger;
         currentNode.output = styleParser(currentNode.source);
       })
 

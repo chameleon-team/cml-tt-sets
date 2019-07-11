@@ -43,6 +43,5 @@ module.exports = function(content, options = {}) {
       }
     }
   });
-  debugger;
   return generator(ast).code;
 }
