@@ -3,11 +3,10 @@
   "version": "0.0.5",
   "description": "基础组件库&接口能力",
   "scripts": {
-    "publish": "npm run build && cd package && npm publish"
   },
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
   "main": "/package/components",
-  "gitHead": "74a3103815fa361d112df411fffcbb2ffcdcc9ee"
+  "gitHead": "85bdab5af5e7b678a913d888f6d21a60b9f87bd8"
 }
