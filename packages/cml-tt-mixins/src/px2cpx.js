@@ -10,3 +10,4 @@ _.px2cpx = function(px, platform) {
   const cpx = +(750 / viewportWidth * px).toFixed(3);
   return cpx;
 }
+
