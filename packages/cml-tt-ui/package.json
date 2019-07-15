@@ -7,5 +7,8 @@
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
   "main": "/package/components",
-  "gitHead": "85bdab5af5e7b678a913d888f6d21a60b9f87bd8"
+  "dependencies": {},
+  "devDependencies": {
+    "chameleon-runtime": "^0.2.2"
+  }
 }

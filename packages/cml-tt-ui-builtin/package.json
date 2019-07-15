@@ -10,7 +10,9 @@
   "main": "/package/components",
   "dependencies": {
     "chameleon-ui-builtin": "^0.4.0-mvvm.3",
-    "cml-tt-api": "^0.0.6"
+    "cml-tt-api": "0.0.1"
   },
-  "gitHead": "85bdab5af5e7b678a913d888f6d21a60b9f87bd8"
+  "devDependencies": {
+    "chameleon-runtime": "^0.2.2"
+  }
 }
