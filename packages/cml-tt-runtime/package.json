@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-runtime",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "license": "Apache",
   "dependencies": {
     "chameleon-runtime": "^0.2.0-alpha.4",
-    "cml-tt-mixins": "^0.0.6"
+    "cml-tt-mixins": "^0.0.7"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

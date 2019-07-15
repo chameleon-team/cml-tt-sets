@@ -1,13 +1,12 @@
 {
   "name": "cml-tt-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "基础组件库&接口能力",
   "scripts": {},
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
   "main": "/package/components",
-  "dependencies": {},
   "devDependencies": {
     "chameleon-runtime": "^0.2.2"
   }
