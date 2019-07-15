@@ -1,11 +1,8 @@
 import Config from './config'
-import apiInterface from './api.interface'
-
-const instanceAPI = apiInterface.getInstance()
 
 const KEY = {
   tt: {
-    instance: instanceAPI,
+    instance: tt,
     props: 'properties'
   }
 }
