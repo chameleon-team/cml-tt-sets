@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "基础组件库&接口能力",
   "scripts": {
     "publish": "npm run build && cd package && npm publish"
