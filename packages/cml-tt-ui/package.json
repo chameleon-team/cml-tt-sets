@@ -10,7 +10,5 @@
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
-  "main": "/package/components",
-  "dependencies": {
-  }
+  "main": "/package/components"
 }
