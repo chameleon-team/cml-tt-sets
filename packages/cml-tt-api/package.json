@@ -10,5 +10,6 @@
   "license": "Apache",
   "dependencies": {
     "chameleon-api": "^0.4.6"
-  }
+  },
+  "gitHead": "74a3103815fa361d112df411fffcbb2ffcdcc9ee"
 }

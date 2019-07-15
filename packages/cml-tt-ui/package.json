@@ -3,12 +3,11 @@
   "version": "0.0.3",
   "description": "基础组件库&接口能力",
   "scripts": {
-    "build": "sh ./bin/build.sh",
     "publish": "npm run build && cd package && npm publish",
-    "deploy": "sh deploy.sh weex && sh deploy.sh web"
   },
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
-  "main": "/package/components"
+  "main": "/package/components",
+  "gitHead": "74a3103815fa361d112df411fffcbb2ffcdcc9ee"
 }
