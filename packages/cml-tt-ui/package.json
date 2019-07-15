@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "基础组件库&接口能力",
   "scripts": {
-    "publish": "npm run build && cd package && npm publish",
+    "publish": "npm run build && cd package && npm publish"
   },
   "author": "Chameleon-Team",
   "license": "Apache",
