@@ -3,9 +3,6 @@
   "version": "0.0.10-alpha.0",
   "description": "基础组件库&接口能力",
   "scripts": {
-    "build": "sh ./bin/build.sh",
-    "publish": "npm run build && cd package && npm publish",
-    "deploy": "sh deploy.sh weex && sh deploy.sh web"
   },
   "author": "Chameleon-Team",
   "license": "Apache",
@@ -17,5 +14,6 @@
   "devDependencies": {
     "chameleon-runtime": "^0.2.2",
     "cml-tt-api": "^0.0.10-alpha.0"
-  }
+  },
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }

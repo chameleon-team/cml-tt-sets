@@ -14,5 +14,6 @@
   },
   "devDependencies": {
     "chameleon-runtime": "^0.2.2"
-  }
+  },
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }
