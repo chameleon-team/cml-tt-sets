@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-ui-builtin",
-  "version": "0.0.1",
+  "version": "0.0.10-alpha.0",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "main": "/package/components",
   "dependencies": {
     "chameleon-ui-builtin": "^0.4.0-mvvm.3",
-    "cml-tt-api": "0.0.1"
+    "cml-tt-api": "^0.0.10-alpha.0"
   },
   "devDependencies": {
     "chameleon-runtime": "^0.2.2"
