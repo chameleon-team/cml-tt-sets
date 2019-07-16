@@ -4,7 +4,8 @@
     <text>计算属性: {{computeName}}!</text>
     <text>计算属性: {{computeName}}!</text>
 
-    <proptest val="val"></proptest>
+    <proptest val="{{val}}"></proptest>
+    <view c-bind:click="handleClick">handleClick</view>
     
     </view>
 </template>
@@ -12,8 +13,14 @@
 <script>
 //组件接受不到props
 class Runtime   {
-data = {
-    name: 'Chameleon'
+  data = {
+    name: 'Chameleon',
+    val:1,
+  }
+  methods = {
+    handleClick(){
+      this.val = this.val + 1
+    }
   }
   beforeCreate(e) {
 		console.log("TCL: Index -> beforeCreate -> e", e)
@@ -39,6 +46,7 @@ data = {
       return 'prefix' + this.name
     }
   }
+
    watch = {
     name: function (newV, oldV) {
 			console.log("TCL: Index -> newV, oldV", newV, oldV)

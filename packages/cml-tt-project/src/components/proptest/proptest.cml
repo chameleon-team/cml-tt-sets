@@ -1,6 +1,6 @@
 <template>
   <view>
-    <text>proptest component</text>
+    <text>组件属性测试</text>
     <view>------</view>
     <text>{{val}}</text>
     </view>
