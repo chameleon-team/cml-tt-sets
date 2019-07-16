@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-plugin",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -9,7 +9,7 @@
     "@babel/traverse": "^7.5.0",
     "chameleon-css-loader": "0.4.0-mvvm.6",
     "chameleon-tool-utils": "0.4.0-mvvm.6",
-    "cml-tt-mixins": "0.0.1",
+    "cml-tt-mixins": "^0.0.7",
     "loader-utils": "^1.2.3",
     "mvvm-babel-generator": "0.4.0-mvvm.6",
     "mvvm-template-parser": "0.4.0-mvvm.6",
@@ -23,5 +23,6 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.1.4"
-  }
+  },
+  "gitHead": "85bdab5af5e7b678a913d888f6d21a60b9f87bd8"
 }

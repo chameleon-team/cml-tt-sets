@@ -1,12 +1,8 @@
 {
   "name": "cml-tt-ui",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "基础组件库&接口能力",
-  "scripts": {
-    "build": "sh ./bin/build.sh",
-    "publish": "npm run build && cd package && npm publish",
-    "deploy": "sh deploy.sh weex && sh deploy.sh web"
-  },
+  "scripts": {},
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",

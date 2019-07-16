@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-mixins",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -10,5 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "Apache"
+  "license": "Apache",
+  "gitHead": "85bdab5af5e7b678a913d888f6d21a60b9f87bd8"
 }
