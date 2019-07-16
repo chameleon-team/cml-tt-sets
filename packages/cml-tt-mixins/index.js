@@ -1,5 +1,6 @@
 const utils = require('./src/utils')
 const _ = module.exports = {};
+
 _.eventProxyName = '_cmlEventProxy';
 _.modelEventProxyName = '_cmlModelEventProxy';// c-model的事件代理
 _.inlineStatementEventProxy = '_cmlInline';// 内联语句的事件代理

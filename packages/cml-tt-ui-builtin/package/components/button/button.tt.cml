@@ -27,6 +27,7 @@
 <script>
 import { transCls } from './util'
 
+
  class Button implements ButtonInterface {
     props = {
       text: {
