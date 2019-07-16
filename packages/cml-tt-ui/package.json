@@ -10,8 +10,10 @@
   "author": "Chameleon-Team",
   "license": "Apache",
   "email": "ChameleonCore@didiglobal.com",
-  "main": "/package/components",
-  "dependencies": {},
+  "main": "/components",
+  "dependencies": {
+    "cml-ui": "^0.3.0-alpha.1"
+  },
   "devDependencies": {
     "chameleon-runtime": "^0.2.2"
   }
