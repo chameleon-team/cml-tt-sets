@@ -22,8 +22,7 @@
   "author": "Chameleon-Team",
   "license": "Apache",
   "dependencies": {
-    "chameleon-runtime": "^0.2.0-alpha.4",
-    "cml-tt-mixins": "^0.0.11-alpha.0"
+    
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -40,7 +39,9 @@
     "glob": "^7.1.4",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "chameleon-runtime": "^0.2.0-alpha.4",
+    "cml-tt-mixins": "^0.0.11-alpha.0"
   },
   "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }
