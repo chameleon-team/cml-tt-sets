@@ -1,6 +1,6 @@
 {
   "name": "cml-project",
-  "version": "0.0.12-alpha.0",
+  "version": "0.0.14",
   "description": "A chameleon project",
   "author": "",
   "private": true,
@@ -12,12 +12,12 @@
     "chameleon-runtime": "0.1.4",
     "chameleon-store": "0.0.3",
     "chameleon-ui-builtin": "^0.4.0-mvvm.1",
-    "cml-tt-api": "^0.0.11-alpha.0",
+    "cml-tt-api": "^0.0.14",
     "cml-tt-plugin": "^0.0.11-alpha.0",
     "cml-tt-runtime": "^0.0.12-alpha.0",
     "cml-tt-store": "^0.0.11-alpha.0",
-    "cml-tt-ui": "^0.0.11-alpha.0",
-    "cml-tt-ui-builtin": "^0.0.11-alpha.0",
+    "cml-tt-ui": "^0.0.14",
+    "cml-tt-ui-builtin": "^0.0.14",
     "cml-ui": "^0.3.0-alpha.1"
   },
   "main": "chameleon.config.js"

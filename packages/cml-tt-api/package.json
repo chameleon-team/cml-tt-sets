@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-api",
-  "version": "0.0.11-alpha.0",
+  "version": "0.0.14",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,6 @@
   },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "dependencies": {
-  },
   "devDependencies": {
     "chameleon-api": "^0.4.6"
   },
