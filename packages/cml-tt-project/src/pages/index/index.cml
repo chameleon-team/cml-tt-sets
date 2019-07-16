@@ -12,6 +12,7 @@
 <script>
 import cml from 'cml-tt-api';
 console.log(process.env.media);
+require('./chameleon.png')
 class Index  {
   data = {
     name: 'Chameleon'

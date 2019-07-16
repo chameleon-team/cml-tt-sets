@@ -3,6 +3,7 @@
 </template>
 
 <script>
+require('./chameleon.png')
 
 class Plugin   {
 

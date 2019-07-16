@@ -133,7 +133,7 @@ module.exports = class TouTiaoPlugin {
           if(currentNode.nodeType === 'app') {
             currentNode.childrens.forEach(item=>{
               if(item.moduleType === 'json') {
-                compiler.writeFile('/app.json',item.output, '', 4)
+                compiler.writeFile('/app.json', item.output)
               } else if(item.moduleType === 'style') {
                 compiler.writeFile('/app.ttss', item.output)
               } else if(item.moduleType === 'script') {
@@ -156,7 +156,7 @@ module.exports = class TouTiaoPlugin {
               let entryName = cmlUtils.getPureEntryName(item.realPath, self.cmlType, cml.projectRoot);
               if(item.moduleType === 'json') {
 
-                compiler.writeFile(`/${entryName}.json`, item.output, '', 4)
+                compiler.writeFile(`/${entryName}.json`, item.output)
               } else if(item.moduleType === 'style') {
                 compiler.writeFile(`/${entryName}.ttss`, item.output)
               } else if(item.moduleType === 'template') {
