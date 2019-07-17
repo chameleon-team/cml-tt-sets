@@ -67,11 +67,10 @@ export default new LayerHeader();
 </script>
 <style scoped lang="less">
 .layer-header {
-  display: flex;
   background: #FFFFFF;
   width:750cpx;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   border-bottom: 1px solid #ECEDF0;
   &-title{
     font-size: 40cpx;
