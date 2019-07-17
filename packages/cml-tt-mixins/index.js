@@ -1,13 +1,13 @@
 const utils = require('./src/utils')
 const _ = module.exports = {};
-
+const wxStyleHandle = require('chameleon-css-loader/proxy/proxyMiniapp.js')
 _.eventProxyName = '_cmlEventProxy';
 _.modelEventProxyName = '_cmlModelEventProxy';// c-model的事件代理
 _.inlineStatementEventProxy = '_cmlInline';// 内联语句的事件代理
 _.eventEmitName = '$cmlEmit'; // 触发事件的方法
 _.mergeStyleName = '$cmlMergeStyle';
 _.animationProxy = '_animationCb';
-
+_.styleParseName = '$cmlStyle';
 _.isType = function (obj, type) {
   return Object.prototype.toString.call(obj).slice(8, -1) === type
 }
@@ -121,7 +121,18 @@ _.mixins = {
       if (this.$__checkCmlEmit__) {
         this.$__checkCmlEmit__(eventKey, detail);
       }
-    }
+    },
+    [_.styleParseName](content) {
+      let res = ''
+      if (_.isType(content, 'Object')) {
+        Object.keys(content).forEach(key => {
+          res += `${key}:${content[key]};`
+        })
+      } else if (_.isType(content, 'String')) {
+        res = content;
+      }
+      return wxStyleHandle(res);
+    },
   }
 
 }

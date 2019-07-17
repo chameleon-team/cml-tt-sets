@@ -11,5 +11,8 @@
   },
   "author": "",
   "license": "Apache",
-  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f",
+  "devDependencies": {
+    "chameleon-css-loader": "^0.3.3"
+  }
 }
