@@ -1,7 +1,6 @@
 const postcss = require('postcss');
 const cpx = require('chameleon-css-loader/postcss/cpx.js')
 const weexPlus = require('chameleon-css-loader/postcss/weex-plus.js')
-const atImport = require("postcss-import")
 const fs = require('fs');
 const path = require('path');
 module.exports = function(source) {
