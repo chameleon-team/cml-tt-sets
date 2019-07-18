@@ -1,4 +1,4 @@
-import Config from "../config";
+import Config from "./config";
 // polyhooks 不同端差异化hooks
 /**
  * hooks: all hooks

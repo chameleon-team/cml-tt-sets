@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-runtime",
-  "version": "0.0.1",
+  "version": "0.0.20",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,6 @@
   },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "dependencies": {
-    "chameleon-runtime": "^0.2.0-alpha.4",
-    "cml-tt-mixins": "0.0.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -36,10 +32,13 @@
     "chai": "^4.2.0",
     "chameleon-css-loader": "0.1.0-alpha.4",
     "chameleon-mixins": "0.1.0-alpha.4",
+    "chameleon-runtime": "^0.2.0-alpha.4",
+    "cml-tt-mixins": "^0.0.20",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.4",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
     "shelljs": "^0.8.3"
-  }
+  },
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }

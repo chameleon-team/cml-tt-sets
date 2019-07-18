@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-mixins",
-  "version": "0.0.1",
+  "version": "0.0.20",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -10,5 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "Apache"
+  "license": "Apache",
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f",
+  "devDependencies": {
+    "chameleon-css-loader": "^0.3.3"
+  }
 }

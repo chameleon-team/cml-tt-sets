@@ -1,5 +1,6 @@
 import cml from 'cml-tt-api'
 
+
 export function str2obj (str) {
     let styleAry = str.split(';');
     let obj = {};
