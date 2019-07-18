@@ -9,11 +9,11 @@
   "license": "Apache",
   "main": "/package/components",
   "dependencies": {
-    "chameleon-ui-builtin": "^0.4.0-mvvm.3",
-    "cml-tt-api": "^0.0.20"
   },
   "devDependencies": {
-    "chameleon-runtime": "^0.2.2"
+    "chameleon-runtime": "^0.2.2",
+    "chameleon-ui-builtin": "^0.4.0-mvvm.3",
+    "cml-tt-api": "^0.0.20"
   },
   "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }
