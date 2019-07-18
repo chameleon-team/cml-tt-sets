@@ -1,7 +1,2 @@
-<script cml-type="interface">
-
-interface FootInterface {
-  footStyle: String
-}
-</script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./foot.cml"></script>
+<include src="chameleon-ui-builtin/components/layout/foot/foot.interface"></include>
+<script cml-type="tt" src="./foot.tt.cml"></script>

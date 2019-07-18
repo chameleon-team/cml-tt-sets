@@ -1,6 +1,6 @@
 import cml from 'cml-tt-api';
 import { createAnimation } from "cml-tt-api";
-// import { createAnimation } from "chameleon-api";
+// import { createAnimation } from "cml-tt-api";
 // const animation = createAnimation();// cml-com.js
 Component({
   /**

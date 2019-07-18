@@ -1,1 +1,2 @@
 <include src="chameleon-ui-builtin/components/carousel/carousel.interface"></include>
+<script cml-type="tt" src="./carousel.tt.cml"></script>

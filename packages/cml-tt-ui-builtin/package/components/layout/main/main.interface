@@ -1,7 +1,2 @@
-<script cml-type="interface">
-
-interface MainInterface {
-  mainStyle: String
-}
-</script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./main.cml"></script>
+<include src="chameleon-ui-builtin/components/layout/main/main.interface"></include>
+<script cml-type="tt" src="./main.tt.cml"></script>

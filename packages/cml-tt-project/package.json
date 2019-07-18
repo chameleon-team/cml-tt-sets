@@ -16,6 +16,8 @@
     "cml-tt-plugin": "0.0.1",
     "cml-tt-runtime": "0.0.1",
     "cml-tt-ui-builtin": "0.0.1",
+    "cml-tt-ui": "0.0.1",
+    "cml-tt-store": "0.0.1",
     "cml-ui": "0.1.7"
   },
   "main": "chameleon.config.js",

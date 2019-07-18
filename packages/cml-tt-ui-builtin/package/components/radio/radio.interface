@@ -1,17 +1,3 @@
-<script cml-type="interface">
-type EventDetail = {
-  value: Boolean,
-  index: Number
-}
-interface RadioInterface {
-  checked: Boolean,
-  label: String,
-  disabled: Boolean,
-  position: String,
-  groupIndex: Number,
-  color: String,
-  change(eventDetail: EventDetail): void;
-  changeevent(eventDetail: EventDetail): void;
-}
-</script>
-<script cml-type="web,weex,baidu,wx,alipay" src="./radio.cml"></script>
+<include src="chameleon-ui-builtin/components/radio/radio.interface"></include>
+
+<script cml-type="tt" src="./radio.tt.cml"></script>

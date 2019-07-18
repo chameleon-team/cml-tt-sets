@@ -1,4 +1,7 @@
 const { types: t } = require('mvvm-template-parser');
+const parser = require('@babel/parser');
+const traverse = require('@babel/traverse')["default"];
+const generate = require('@babel/generator')["default"];
 const _ = module.exports = {};
 _.trimCurly = (str) => str.replace(/(?:{{)|(?:}})/ig, '');
 
@@ -68,4 +71,48 @@ _.isOriginTagOrNativeComp = function(tagName, options = {}) {
     return true
   }
   return false;
+}
+_.isMustacheReactive = function (value) {
+  let reg = /(?=.*[{]{2})(?=.*[}]{2})/;
+  return reg.test(value);
+}
+_.transformWxDynamicStyleCpxToRpx = function(value) {
+  let reg = /[{]{2}([^{}]*?)[}]{2}/g;
+  value = _.transformNotInMustacheCpxToRpx(value);
+  value = value.replace(reg, (match, statement) => `{{${_.transformMustacheCpxToRpx(statement)}}}`);
+  value = _.doublequot2singlequot(value)
+  return value;
+}
+_.transformNotInMustacheCpxToRpx = function(value) {
+  let isNotMustacheCpxToRpxReg = /([^{}]+)?(\{\{[^{}]+\}\})?/g;
+  let temp = '';
+  value.replace(isNotMustacheCpxToRpxReg, (match, $1, $2, $3) => {
+    if ($1) {
+      temp += $1.replace(/cpx/g, 'rpx');
+    }
+    if ($2) {
+      temp += $2;
+    }
+  });
+  return temp
+}
+_.transformMustacheCpxToRpx = function(source) {
+  const ast = parser.parse(source, {
+    plugins: ['jsx']
+  })
+  traverse(ast, {
+    enter(path) {
+      let node = path.node;
+      if (t.isStringLiteral(node)) {
+        if (node.value.includes('cpx')) {
+          node.value = node.value.replace(/cpx/g, `rpx`);
+        }
+      }
+    }
+  })
+  let result = generate(ast).code;
+  if (/;$/.test(result)) { // 这里有个坑，jsx解析语法的时候，默认解析的是js语法，所以会在最后多了一个 ; 字符串；但是在 html中 ; 是无法解析的；
+    result = result.slice(0, -1);
+  }
+  return result
 }

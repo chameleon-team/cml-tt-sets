@@ -6,6 +6,7 @@
     <view><text class="btn" data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
     <view><text class="btn" data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
     <view><text class="btn" data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
+    <view><text class="btn" data-page="/pages/store/store" bindtap="gotoPage" >goto-store</text></view>
   </view>
 </template>
 
@@ -15,7 +16,8 @@ console.log(process.env.media);
 require('./chameleon.png')
 class Index  {
   data = {
-    name: 'Chameleon'
+    name: 'Chameleon',
+    height:'200cpx;bakcground-color:red'
   }
   methods = {
     gotoPage(e) {
@@ -64,12 +66,14 @@ export default new Index();
   align-items: center;
 }
 .btn{
-  width:750cpx;
+  width:400cpx;
   height:100cpx;
   display:flex;
   flex-direction:row;
   justify-content: center;
   align-items: center;
+  border-radius:20cpx;
+  background-color:aquamarine;
 }
 
 </style>

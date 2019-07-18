@@ -1,0 +1,74 @@
+<template>
+  <view>
+    <text>store中testStore 的a: {{ testStore.a }}</text>
+    <button class="btn" c-bind:onclick="getTestStoreData" text="改变testStore中a的值"></button>
+  </view>
+</template>
+
+<script>
+import store from '../../store'
+
+//组件接受不到props
+class Store   {
+  data = {
+    name: 'Chameleon'
+  }
+  
+  beforeCreate(e) {
+  }
+
+  created(e) {
+    console.log('store', store)
+    console.log('testStore', this.testStore)
+  }
+  beforeMount(e) {
+  }
+  mounted() {
+  }
+  computed = {
+    ...store.mapState(['testStore']),
+  }
+  watch = {
+  }
+  methods = {
+    ...store.mapActions([
+      'getTestStoreData'
+    ])
+  }
+}
+
+export default new Store();
+</script>
+
+<style>
+
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+    }
+  },
+  "wx": {
+    "navigationBarTitleText": "index",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#E2E2E2"
+  },
+  "alipay": {
+    "defaultTitle": "index",
+    "pullRefresh": false,
+    "allowsBounceVertical": "YES",
+    "titleBarColor": "#ffffff"
+  },
+  "baidu": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "index",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  }
+}
+</script>

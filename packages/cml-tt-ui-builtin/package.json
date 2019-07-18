@@ -11,5 +11,8 @@
   "dependencies": {
     "chameleon-ui-builtin": "^0.4.0-mvvm.3",
     "cml-tt-api": "0.0.1"
+  },
+  "devDependencies": {
+    "chameleon-runtime": "^0.2.2"
   }
 }
