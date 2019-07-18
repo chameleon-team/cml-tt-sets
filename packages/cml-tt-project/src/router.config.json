@@ -13,6 +13,11 @@
       "name": "api"
     },
     {
+      "url": "/cml/h5/animation",
+      "path": "/pages/api/animation",
+      "name": "animation"
+    },
+    {
       "url": "/cml/h5/plugin",
       "path": "/pages/plugin/plugin",
       "name": "plugin"

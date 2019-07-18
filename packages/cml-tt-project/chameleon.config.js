@@ -13,15 +13,6 @@ cml.config.merge({
   extPlatform: {
     tt: 'cml-tt-plugin',
   },
-  baseStyle:{
-    wx: true,
-    web: true,
-    weex: true,
-    alipay: true,
-    baidu: true,
-    qq: true,
-    tt:true,
-  },
   babelPath: [
     path.join(__dirname,'node_modules/cml-tt-ui-builtin'),
     path.join(__dirname,'node_modules/cml-tt-runtime'),
@@ -31,7 +22,16 @@ cml.config.merge({
     path.join(__dirname,'node_modules/cml-tt-mixins'),
     path.join(__dirname,'node_modules/mobx'),
   ],
-  platforms: ['tt'],
+  baseStyle:{
+    wx: true,
+    web: true,
+    weex: true,
+    alipay: true,
+    baidu: true,
+    qq: true,
+    tt:true,
+  },
+  platforms: ['tt','wx'],
   buildInfo: {
     wxAppId: '123456'
   },
