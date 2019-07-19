@@ -86,7 +86,6 @@ module.exports = class TouTiaoPlugin {
        * parentNodeType 父节点的nodeType
        */
       compiler.hook('compile-style', function(currentNode, parentNodeType) {
-        debugger;
         currentNode.output = styleParser(currentNode.source);
       })
 
@@ -96,7 +95,11 @@ module.exports = class TouTiaoPlugin {
        * parentNodeType 父节点的nodeType
        */
       compiler.hook('compile-json', function(currentNode, parentNodeType) {
-        currentNode.output = currentNode.source;
+        if(currentNode.ext === '.json') {
+          currentNode.output = compiler.amd.amdWrapModule({content:currentNode.source, modId:currentNode.modId});
+        } else {
+          currentNode.output = currentNode.source;
+        }
       })
 
       /**
@@ -196,6 +199,10 @@ module.exports = class TouTiaoPlugin {
           }
 
           if(currentNode.nodeType === 'module' && ~['script','asset'].indexOf(currentNode.moduleType)) {
+            commonjsContent += currentNode.output;
+          }
+
+          if(currentNode.nodeType === 'module' && currentNode.moduleType === 'json' && currentNode.ext === '.json') {
             commonjsContent += currentNode.output;
           }
     
