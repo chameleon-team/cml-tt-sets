@@ -1,12 +1,12 @@
 <template>
   <view class="scroller-wrap">
-    <view><text class="btn" data-page="/pages/api/api" bindtap="gotoPage">gotoApiPage</text></view>
-    <view><text class="btn" data-page="/pages/plugin/plugin" bindtap="gotoPage" >gotoPluginPage</text></view>
-    <view><text class="btn" data-page="/pages/runtime/runtime" bindtap="gotoPage" >gotoRuntimePage</text></view>
-    <view><text class="btn" data-page="/pages/ui/ui" bindtap="gotoPage" >gotoUiPage</text></view>
-    <view><text class="btn" data-page="/pages/ui-builtin/view" bindtap="gotoPage" >gotoUiBuiltinPage</text></view>
-    <view><text class="btn" data-page="/pages/compile/compile" bindtap="gotoPage" >goto-compile</text></view>
-    <view><text class="btn" data-page="/pages/store/store" bindtap="gotoPage" >goto-store</text></view>
+     <view><text class="btn" data-page="/pages/api/api" c-bind:tap="gotoPage">gotoApiPage</text></view>
+    <view><text class="btn" data-page="/pages/plugin/plugin" c-bind:tap="gotoPage" >gotoPluginPage</text></view>
+    <view><text class="btn" data-page="/pages/runtime/runtime" c-bind:tap="gotoPage" >gotoRuntimePage</text></view>
+    <view><text class="btn" data-page="/pages/ui/ui" c-bind:tap="gotoPage" >gotoUiPage</text></view>
+    <view><text class="btn" data-page="/pages/ui-builtin/view" c-bind:tap="gotoPage" >gotoUiBuiltinPage</text></view>
+    <view><text class="btn" data-page="/pages/compile/compile" c-bind:click="gotoPage" >goto-compile</text></view>
+    <view><text class="btn" data-page="/pages/store/store" c-bind:tap="gotoPage" >goto-store</text></view>
   </view>
 </template>
 

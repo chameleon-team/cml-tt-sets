@@ -39,6 +39,7 @@
 </template>
 
 <script>
+const testJson = require('./test.json');
 class Compile   {
 
   data = {

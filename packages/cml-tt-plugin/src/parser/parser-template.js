@@ -6,10 +6,12 @@ const parserDirective = require('./parser-directive');
 const parserAnimationTag = require('./parser-animation');
 const parserDynamicComponent = require('./parser-dynamic-component');
 const parserTemplateStyle = require('./parser-template-style.js');
+const preProcessTemplate = require('../common/pre-process-template.js');
 // 标记此attr需要被替换或者是单纯的删除
 const EMPTYTAG = Symbol('cml-remove-tag');
 
 module.exports = function(content, options = {}) {
+  content = preProcessTemplate.preParseAnimation(content)
   let ast = cmlparse(content);
   traverse(ast, {
     enter(path) {
