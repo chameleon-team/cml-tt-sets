@@ -65,7 +65,7 @@ class Compile   {
 
   methods = {
     handleClick(...args){
-      console.log('handleClick',args);
+      console.log('handleClick',args,testJson);
     },
     handleTap1(){
       console.log('handleTapouter')
