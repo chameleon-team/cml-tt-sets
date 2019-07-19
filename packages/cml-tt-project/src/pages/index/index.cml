@@ -13,6 +13,9 @@
 <script>
 import cml from 'cml-tt-api';
 console.log(process.env.media);
+var result = require('../name.json');
+console.log(result);
+require('./chameleon.png')
 class Index  {
   data = {
     name: 'Chameleon',

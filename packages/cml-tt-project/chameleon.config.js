@@ -54,7 +54,7 @@ cml.config.merge({
   },
   tt: {
     dev: {
-      moduleIdType: 'name'
+      moduleIdType: 'name',
     },
     build: {
       minimize: true
