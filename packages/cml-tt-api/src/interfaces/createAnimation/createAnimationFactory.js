@@ -87,7 +87,7 @@ const createAnimationFactory = function (description = {}) {
     // 清空
     updateQueue = [];
     this.useExport = '0';
-    return result;
+    return JSON.stringify(result); //头条小程序接受的是字符串
 
   };
 
