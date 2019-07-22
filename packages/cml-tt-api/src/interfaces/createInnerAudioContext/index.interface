@@ -1,0 +1,12 @@
+<include src="chameleon-api/src/interfaces/createInnerAudioContext/index.interface"></include>
+
+<script cml-type="tt">
+
+class Method implements AudioInterfaceInterface {
+  createInnerAudioContext() {
+    return tt.createInnerAudioContext();
+  }
+}
+
+export default new Method();
+</script>
