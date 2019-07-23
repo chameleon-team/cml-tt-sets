@@ -41,7 +41,9 @@
   };
 
   class Method implements CreateAnimationInterface {
-    initAnimation() {}
+    initAnimation() {
+      this.isTTAnimation = true;
+    }
     checkNumber(number) {}
     checkString(string) {}
     checkObject(object) {}

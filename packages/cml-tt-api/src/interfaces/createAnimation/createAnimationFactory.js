@@ -3,7 +3,7 @@ import Index from './index.interface';
 const {
   exportMiddleWare,
   checkNumber,
-  checkString
+  checkString,
 } = Index;
 
 let id = 0;
@@ -87,7 +87,11 @@ const createAnimationFactory = function (description = {}) {
     // 清空
     updateQueue = [];
     this.useExport = '0';
-    return JSON.stringify(result); //头条小程序接受的是字符串
+    if(Index && Index.isTTAnimation){
+      console.log('Index',Index)
+      return JSON.stringify(result); //头条小程序接受的是字符串
+    }
+    return result; 
 
   };
 
