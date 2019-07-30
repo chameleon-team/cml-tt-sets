@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-api",
-  "version": "0.0.4",
+  "version": "0.0.4-alpha1",
   "description": "",
   "main": "index.js",
   "scripts": {

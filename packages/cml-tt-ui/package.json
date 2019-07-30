@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-ui",
-  "version": "0.0.4",
+  "version": "0.0.4-alpha1",
   "description": "基础组件库&接口能力",
   "scripts": {},
   "author": "Chameleon-Team",
@@ -9,7 +9,7 @@
   "main": "/components",
   "devDependencies": {
     "chameleon-runtime": "^0.2.2",
-    "cml-tt-api": "0.0.4",
+    "cml-tt-api": "0.0.4-alpha1",
     "cml-ui": "^0.3.0-alpha.1"
   },
   "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
