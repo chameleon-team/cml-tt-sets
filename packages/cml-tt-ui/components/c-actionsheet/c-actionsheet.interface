@@ -1,0 +1,5 @@
+
+<include src="cml-ui/components/c-actionsheet/c-actionsheet.interface"></include>
+<script cml-type="tt" src="./c-actionsheet.cml"></script>
+
+

@@ -1,12 +1,11 @@
 <include src="chameleon-runtime/src/interfaces/createApp/index.interface"></include>
 <script cml-type="tt">
+import {App} from '../../tt'
   class Method implements createAppInterface {
     createApp(options) {
-      App(options);
-      return {}
+      return new App(options);
     }
   }
 
-  
   export default new Method();
 </script>

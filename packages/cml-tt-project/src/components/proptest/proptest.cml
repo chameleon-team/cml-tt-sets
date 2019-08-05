@@ -1,0 +1,65 @@
+<template>
+  <view>
+    <text>proptest component</text>
+    <view>------</view>
+    <text>{{val}}</text>
+    </view>
+</template>
+
+<script>
+
+class Proptest {
+  props = {
+    val: {
+      type:String,
+      default:'origin-str'
+    },
+    propsCheck: {
+      type:Object,
+      default: {}
+    }
+  }
+  data = {
+  }
+
+  computed = {
+  }
+
+  watch  = {
+  }
+
+  methods = {
+  }
+
+  beforeCreate() {
+  }
+
+  created() {
+  }
+
+  beforeMount() {
+  }
+
+  mounted() {
+  }
+
+  beforeDestroy() {
+  }
+
+  destroyed() {
+  }
+}
+export default new Proptest();
+
+</script>
+<style>
+
+</style>
+<script cml-type="json">
+{
+  "component": true,
+  "base": {
+    "usingComponents": {}
+  }
+}
+</script>

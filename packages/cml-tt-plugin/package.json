@@ -1,19 +1,28 @@
 {
   "name": "cml-tt-plugin",
-  "version": "0.0.1",
+  "version": "0.0.4-alpha1",
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@babel/generator": "^7.5.0",
+    "@babel/parser": "^7.5.0",
+    "@babel/traverse": "^7.5.0",
     "chameleon-css-loader": "0.4.0-mvvm.6",
     "chameleon-tool-utils": "0.4.0-mvvm.6",
+    "cml-tt-mixins": "0.0.4-alpha1",
     "loader-utils": "^1.2.3",
     "mvvm-babel-generator": "0.4.0-mvvm.6",
     "mvvm-template-parser": "0.4.0-mvvm.6",
     "postcss": "^7.0.14"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive --reporter spec"
   },
   "author": "Chameleon-Team",
-  "license": "Apache"
+  "license": "Apache",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }

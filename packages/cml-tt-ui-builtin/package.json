@@ -1,14 +1,17 @@
 {
   "name": "cml-tt-ui-builtin",
-  "version": "0.0.1",
+  "version": "0.0.4-alpha1",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "main": "/components",
-  "dependencies": {
-    "chameleon-ui-builtin": "^0.4.0-mvvm.3"
-  }
+  "main": "/package/components",
+  "devDependencies": {
+    "chameleon-runtime": "^0.2.2",
+    "chameleon-ui-builtin": "^0.4.0-mvvm.3",
+    "cml-tt-api": "0.0.4-alpha1"
+  },
+  "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }

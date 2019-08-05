@@ -1,0 +1,118 @@
+<template>
+<page title="view">
+  <view class="page-demo">
+      <view c-for="{{comps}}" 
+        c-bind:click="handleClick(item.path)" 
+      >
+        <view class="btn">{{item.name}}</view>
+      </view>
+  </view>
+</page>
+</template>
+<script>
+  import cml from 'cml-tt-api'
+  class View   {
+
+  data = {
+    comps:[
+      {name:"button",path:"/pages/ui-builtin/example/button/button"},
+      {name:"carousel",path:"/pages/ui-builtin/example/carousel/carousel"},
+      {name:"checkbox",path:"/pages/ui-builtin/example/checkbox/checkbox"},
+      {name:"image",path:"/pages/ui-builtin/example/image/image"},
+      {name:"input",path:"/pages/ui-builtin/example/input/input"},
+      {name:"layout",path:"/pages/ui-builtin/example/layout/layout"},
+      {name:"list",path:"/pages/ui-builtin/example/list/list"},
+      {name:"radio",path:"/pages/ui-builtin/example/radio/radio"},
+      {name:"richtext",path:"/pages/ui-builtin/example/richtext/richtext"},
+      {name:"row",path:"/pages/ui-builtin/example/row/row"},
+      {name:"scroller",path:"/pages/ui-builtin/example/scroller/scroller"},
+      {name:"switch",path:"/pages/ui-builtin/example/switch/switch"},
+      {name:"text",path:"/pages/ui-builtin/example/text/text"},
+      {name:"textarea",path:"/pages/ui-builtin/example/textarea/textarea"},
+      {name:"video",path:"/pages/ui-builtin/example/video/video"},
+      {name:"view",path:"/pages/ui-builtin/example/view/view"},
+    ]
+  }
+  computed = {}
+  watch  = {}
+  methods = {
+    handleClick(path){
+      cml.navigateTo({
+        path
+      })
+    }
+  }
+  beforeCreate() {}
+  created() {}
+  beforeMount() {}
+  mounted() {
+  }
+  beforeDestroy() {}
+  destroyed() {}
+}
+export default new View();
+</script>
+<style scoped>
+.page-demo {
+   background: #f8f8f8;
+   flex: 1;
+ }
+.page-box {
+  margin-top: 80cpx;
+}
+.page-section-title {
+  font-size: 32cpx;
+  margin: 0 30cpx;
+}
+.page-section-content {
+  margin: 80cpx;
+  display: flex;
+  font-size: 32cpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item {
+  width: 200cpx;
+  height: 300cpx;
+  line-height: 300cpx;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item-V {
+  width: 300cpx;
+  height: 200cpx;
+  line-height: 200cpx;
+  justify-content: center;
+  align-items: center;
+}
+.demo-1 {
+  background-color: #81c0c0;
+}
+.demo-2 {
+  background-color: #97cbff;
+}
+.demo-3 {
+  background-color: #e0e0e0;
+}
+.btn{
+  width:750cpx;
+  height:100cpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<script cml-type="json">
+{
+    "base": {
+        "usingComponents": {
+        
+        },
+        "navigationBarTitleText": "index",
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#E2E2E2"
+    }
+}
+</script>

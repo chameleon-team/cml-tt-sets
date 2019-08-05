@@ -1,9 +1,9 @@
 <include src="chameleon-runtime/src/interfaces/createPage/index.interface"></include>
 <script cml-type="tt">
+ import {Page} from '../../tt'
   class Method implements createPageInterface {
     createPage(options) {
-      Page(options);
-      return {};
+      return new Page(options);
     }
   }
 

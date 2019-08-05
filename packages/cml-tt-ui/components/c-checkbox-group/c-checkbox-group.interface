@@ -1,0 +1,2 @@
+<include src="cml-ui/components/c-checkbox-group/c-checkbox-group.interface"></include>
+<script cml-type="tt" src="./c-checkbox-group.cml"></script>

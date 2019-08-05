@@ -1,20 +1,63 @@
 <template>
-  <view c-if="{{true}}" class="scroller-wrap">
-    <view class="class1"><text>chameleon</text></view>
-    <demo-com></demo-com>
+  <view class="scroller-wrap">
+     <view><text class="btn" data-page="/pages/api/api" c-bind:tap="gotoPage">gotoApiPage</text></view>
+    <view><text class="btn" data-page="/pages/plugin/plugin" c-bind:tap="gotoPage" >gotoPluginPage</text></view>
+    <view><text class="btn" data-page="/pages/runtime/runtime" c-bind:tap="gotoPage" >gotoRuntimePage</text></view>
+    <view><text class="btn" data-page="/pages/ui/ui" c-bind:tap="gotoPage" >gotoUiPage</text></view>
+    <view><text class="btn" data-page="/pages/ui-builtin/view" c-bind:tap="gotoPage" >gotoUiBuiltinPage</text></view>
+    <view><text class="btn" data-page="/pages/compile/compile" c-bind:click="gotoPage" >goto-compile</text></view>
+    <view><text class="btn" data-page="/pages/store/store" c-bind:tap="gotoPage" >goto-store</text></view>
   </view>
-
 </template>
 
 <script>
-// import cml from 'cml-tt-api';
+import cml from 'cml-tt-api';
+console.log(process.env.media);
+var result = require('../name.json');
+console.log(result);
+require('./chameleon.png')
 class Index  {
-  
+  data = {
+    name: 'Chameleon',
+    height:'200cpx;bakcground-color:red'
+  }
+  methods = {
+    gotoPage(e) {
+      cml.navigateTo({
+        path: e.target.dataset.page
+      })
+    },
+    gotoApiPage() {
+      cml.navigateTo({
+        path: '/pages/api/api'
+      })
+    },
+    gotoPluginPage() {
+      cml.navigateTo({
+        path: '/pages/plugin/plugin'
+      })
+    },
+    gotoRuntimePage() {
+      cml.navigateTo({
+        path: '/pages/runtime/runtime'
+      })
+    },
+    gotoUiPage() {
+      cml.navigateTo({
+        path: '/pages/ui/ui'
+      })
+    },
+    gotoUiBuiltinPage() {
+      cml.navigateTo({
+        path: '/pages/ui-builtin/view'
+      })
+    }
+  }
+
 }
 
 export default new Index();
 
-// cml.alert({message: 'chameleon', confirmTitle:'确定'})
 
 </script>
 <style>
@@ -24,12 +67,15 @@ export default new Index();
   flex-direction: column;
   align-items: center;
 }
-
-.class1 {
-  width: 100cpx;
-  height: 100cpx;
-  background: url('../../assets/images/chameleon.png') no-repeat;
-  background-size: 100cpx 100cpx;
+.btn{
+  width:400cpx;
+  height:100cpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  border-radius:20cpx;
+  background-color:aquamarine;
 }
 
 </style>
@@ -37,7 +83,6 @@ export default new Index();
 {
   "base": {
     "usingComponents": {
-      "demo-com": "/components/demo-com/demo-com"
     }
   },
   "wx": {

@@ -1,0 +1,43 @@
+<template>
+  <page title="carousel">
+    <carousel class="container" indicator-dots="{{true}}"  current="{{0}}" circular="{{true}}" autoplay="{{true}}" interval="{{2000}}">
+      <carousel-item>
+        <view  class="carousel-item" style="background-color: #EBDEAA"></view>
+      </carousel-item>
+      <carousel-item>
+        <view class="carousel-item" style="background-color: #E3EDCD"></view>
+      </carousel-item>
+      <carousel-item>
+        <view class="carousel-item" style="background-color: #EAEAEF"></view>
+      </carousel-item>
+    </carousel>
+  </page>
+</template>
+<script>
+  class Carousel {}
+
+  export default new Carousel();
+
+</script>
+
+<style scoped>
+.container {
+  height: 300cpx;
+}
+.carousel-item {
+  height: 300cpx;
+  width: 750cpx;
+}
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+    }
+  }
+}
+</script>
+
+
+

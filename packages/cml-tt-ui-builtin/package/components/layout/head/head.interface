@@ -1,0 +1,2 @@
+<include src="chameleon-ui-builtin/components/layout/head/head.interface"></include>
+<script cml-type="tt" src="./head.tt.cml"></script>

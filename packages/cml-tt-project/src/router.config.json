@@ -5,7 +5,228 @@
     {
       "url": "/cml/h5/index",
       "path": "/pages/index/index",
-      "name": "首页",
+      "name": "首页"
+    },
+    {
+      "url": "/cml/h5/api",
+      "path": "/pages/api/api",
+      "name": "api"
+    },
+    {
+      "url": "/cml/h5/animation",
+      "path": "/pages/api/animation",
+      "name": "animation"
+    },
+    {
+      "url": "/cml/h5/plugin",
+      "path": "/pages/plugin/plugin",
+      "name": "plugin"
+    },
+    {
+      "url": "/cml/h5/runtime",
+      "path": "/pages/runtime/runtime",
+      "name": "runtime"
+    },
+    {
+      "url": "/cml/h5/ui",
+      "path": "/pages/ui/ui",
+      "name": "runtime"
+    },
+    {
+      "url": "/cml/h5/ui-builtin/view",
+      "path": "/pages/ui-builtin/view",
+      "name": "view"
+    },
+    {
+      "url": "/pages/compile/compile",
+      "path": "/pages/compile/compile",
+      "name": "compile"
+    },
+    {
+      "name": "list",
+      "url": "/pages/ui-builtin/example/list/list",
+      "path": "/pages/ui-builtin/example/list/list",
+      "mock": "index.php"
+    },
+    {
+      "name": "scroller",
+      "url": "/pages/ui-builtin/example/scroller/scroller",
+      "path": "/pages/ui-builtin/example/scroller/scroller",
+      "mock": "index.php"
+    },
+    {
+      "name": "view",
+      "url": "/pages/ui-builtin/example/view/view",
+      "path": "/pages/ui-builtin/example/view/view",
+      "mock": "index.php"
+    },
+    {
+      "name": "text",
+      "url": "/pages/ui-builtin/example/text/text",
+      "path": "/pages/ui-builtin/example/text/text",
+      "mock": "index.php"
+    },
+    {
+      "name": "button",
+      "url": "/pages/ui-builtin/example/button/button",
+      "path": "/pages/ui-builtin/example/button/button",
+      "mock": "index.php"
+    },
+    {
+      "name": "input",
+      "url": "/pages/ui-builtin/example/input/input",
+      "path": "/pages/ui-builtin/example/input/input",
+      "mock": "index.php"
+    },
+    {
+      "name": "textarea",
+      "url": "/pages/ui-builtin/example/textarea/textarea",
+      "path": "/pages/ui-builtin/example/textarea/textarea",
+      "mock": "index.php"
+    },
+    {
+      "name": "image",
+      "url": "/pages/ui-builtin/example/image/image",
+      "path": "/pages/ui-builtin/example/image/image",
+      "mock": "index.php"
+    },
+    {
+      "name": "video",
+      "url": "/pages/ui-builtin/example/video/video",
+      "path": "/pages/ui-builtin/example/video/video",
+      "mock": "index.php"
+    },
+    {
+      "name": "richtext",
+      "url": "/pages/ui-builtin/example/richtext/richtext",
+      "path": "/pages/ui-builtin/example/richtext/richtext"
+    },
+    {
+      "name": "switch",
+      "url": "/pages/ui-builtin/example/switch/switch",
+      "path": "/pages/ui-builtin/example/switch/switch"
+    },
+    {
+      "name": "radio",
+      "url": "/pages/ui-builtin/example/radio/radio",
+      "path": "/pages/ui-builtin/example/radio/radio"
+    },
+    {
+      "name": "checkbox",
+      "url": "/pages/ui-builtin/example/checkbox/checkbox",
+      "path": "/pages/ui-builtin/example/checkbox/checkbox"
+    },
+    {
+      "name": "carousel",
+      "url": "/pages/ui-builtin/example/carousel/carousel",
+      "path": "/pages/ui-builtin/example/carousel/carousel"
+    },
+    {
+      "name": "row",
+      "url": "/pages/ui-builtin/example/row/row",
+      "path": "/pages/ui-builtin/example/row/row",
+      "mock": "index.php"
+    },
+    {
+      "name": "layout",
+      "url": "/pages/ui-builtin/example/layout/layout",
+      "path": "/pages/ui-builtin/example/layout/layout",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-toast",
+      "url": "/pages/ui/example/c-toast/c-toast",
+      "path": "/pages/ui/example/c-toast/c-toast",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-actionsheet",
+      "url": "/pages/ui/example/c-actionsheet/c-actionsheet",
+      "path": "/pages/ui/example/c-actionsheet/c-actionsheet",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-checkbox-group",
+      "url": "/pages/ui/example/c-checkbox-group/c-checkbox-group",
+      "path": "/pages/ui/example/c-checkbox-group/c-checkbox-group",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-dialog",
+      "url": "/pages/ui/example/c-dialog/c-dialog",
+      "path": "/pages/ui/example/c-dialog/c-dialog",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-loading",
+      "url": "/pages/ui/example/c-loading/c-loading",
+      "path": "/pages/ui/example/c-loading/c-loading",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-picker",
+      "url": "/pages/ui/example/c-picker/c-picker",
+      "path": "/pages/ui/example/c-picker/c-picker",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-picker-date",
+      "url": "/pages/ui/example/c-picker-date/c-picker-date",
+      "path": "/pages/ui/example/c-picker-date/c-picker-date",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-picker-item",
+      "url": "/pages/ui/example/c-picker-item/c-picker-item",
+      "path": "/pages/ui/example/c-picker-item/c-picker-item",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-picker-panel",
+      "url": "/pages/ui/example/c-picker-panel/c-picker-panel",
+      "path": "/pages/ui/example/c-picker-panel/c-picker-panel",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-popup",
+      "url": "/pages/ui/example/c-popup/c-popup",
+      "path": "/pages/ui/example/c-popup/c-popup",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-radio-group",
+      "url": "/pages/ui/example/c-radio-group/c-radio-group",
+      "path": "/pages/ui/example/c-radio-group/c-radio-group",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-refresh",
+      "url": "/pages/ui/example/c-refresh/c-refresh",
+      "path": "/pages/ui/example/c-refresh/c-refresh",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-tab",
+      "url": "/pages/ui/example/c-tab/c-tab",
+      "path": "/pages/ui/example/c-tab/c-tab",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-tabbar",
+      "url": "/pages/ui/example/c-tabbar/c-tabbar",
+      "path": "/pages/ui/example/c-tabbar/c-tabbar",
+      "mock": "index.php"
+    },
+    {
+      "name": "c-tip",
+      "url": "/pages/ui/example/c-tip/c-tip",
+      "path": "/pages/ui/example/c-tip/c-tip",
+      "mock": "index.php"
+    },
+    {
+      "name": "store",
+      "url": "/pages/store/store",
+      "path": "/pages/store/store",
       "mock": "index.php"
     }
   ]
