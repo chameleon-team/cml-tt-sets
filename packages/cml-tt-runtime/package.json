@@ -1,6 +1,6 @@
 {
   "name": "cml-tt-runtime",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "chameleon-css-loader": "0.1.0-alpha.4",
     "chameleon-mixins": "0.1.0-alpha.4",
     "chameleon-runtime": "^0.2.0-alpha.4",
-    "cml-tt-mixins": "0.2.1",
+    "cml-tt-mixins": "0.2.2",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.4",
     "istanbul": "^1.1.0-alpha.1",

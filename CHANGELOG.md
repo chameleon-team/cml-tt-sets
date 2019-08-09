@@ -1,3 +1,5 @@
+## [0.2.2]
+  - cml-tt-pkg相关devDependencies更新到最新
 ## [0.2.1]
   - 基于0.2.1-alpha.0发布
 ## [0.2.1-alpha.0]
