@@ -1,31 +1,40 @@
 const { types: t } = require('mvvm-template-parser');
 const { trimCurly, getModelKey } = require('../util');
 const ttMixin = require('../../../cml-tt-mixins/index');
+const config = require('../common/config.js');
+const template = config.template;
 
 module.exports = function(context) {
   let { attributes, attr, node, EMPTYTAG } = context;
   // 列表渲染
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-for') {
-    attr.name.name = 'tt:for'
+    // attr.name.name = 'tt:for'
+    attr.name.name = template[attr.name.name]
   }
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-for-index') {
-    attr.name.name = 'tt:for-index'
+    // attr.name.name = 'tt:for-index'
+    attr.name.name = template[attr.name.name]
   }
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-for-item') {
-    attr.name.name = 'tt:for-item'
+    // attr.name.name = 'tt:for-item' 
+    attr.name.name = template[attr.name.name]
   }
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-key') {
-    attr.name.name = 'tt:key'
+    // attr.name.name = 'tt:key'
+    attr.name.name = template[attr.name.name]
   }
   // 条件渲染
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-if') {
-    attr.name.name = 'tt:if'
+    // attr.name.name = 'tt:if'
+    attr.name.name = template[attr.name.name]
   }
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-else') {
-    attr.name.name = 'tt:else'
+    // attr.name.name = 'tt:else'
+    attr.name.name = template[attr.name.name]
   }
   if(t.isJSXIdentifier(attr.name) && attr.name.name === 'c-else-if') {
-    attr.name.name = 'tt:elif'
+    // attr.name.name = 'tt:elif'
+    attr.name.name = template[attr.name.name]
   }
 
   // c-model

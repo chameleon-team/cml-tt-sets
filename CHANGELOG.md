@@ -1,3 +1,5 @@
+## [0.2.3]
+  - cml-tt-plugin模板解析部分增加可以配置 c-if c-else-if c-else c-for c-for-index c-for-item c-key 配置替换
 ## [0.2.2]
   - cml-tt-pkg相关devDependencies更新到最新
 ## [0.2.1]

@@ -1,6 +1,7 @@
 const { types: t } = require('mvvm-template-parser');
 const { trimCurly, trim } = require('../util');
-
+const config = require('../common/config.js');
+const template = config.template;
 module.exports = function (context) {
   let { options, path, node, tagName, attributes, attr } = context;
   if (tagName.toLowerCase() === 'component' && t.isJSXIdentifier(attr.name) && attr.name.name === 'is') {
@@ -29,7 +30,7 @@ module.exports = function (context) {
         // 去掉is和shrinkcomponents属性
         let newAttributes = attributes.filter(inner => inner.name.name !== 'is' && inner.name.name !== 'shrinkcomponents');
 
-        newAttributes.push(t.jsxAttribute(t.jsxIdentifier(`tt:if`), t.stringLiteral(`{{${currentComp} === '${comp}'}}`)));
+        newAttributes.push(t.jsxAttribute(t.jsxIdentifier(`${template['c-if']}`), t.stringLiteral(`{{${currentComp} === '${comp}'}}`)));
         let openTag = t.jsxOpeningElement(t.jsxIdentifier(comp), newAttributes);
         let closeTag = t.jsxClosingElement(t.jsxIdentifier(comp))
         let insertNode = t.jsxElement(openTag, closeTag, jsxElementChildren, false);
