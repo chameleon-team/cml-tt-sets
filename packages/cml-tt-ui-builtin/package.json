@@ -7,7 +7,7 @@
   },
   "author": "Chameleon-Team",
   "license": "Apache",
-  "main": "/package/components",
+  "main": "/components",
   "devDependencies": {
     "chameleon-runtime": "^0.2.2",
     "chameleon-ui-builtin": "^0.4.0-mvvm.3",
