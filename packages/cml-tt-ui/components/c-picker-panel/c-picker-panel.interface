@@ -1,2 +1,1 @@
 <include src="cml-ui/components/c-picker-panel/c-picker-panel.interface"></include>
-<script cml-type="tt" src="./c-picker-panel.cml"></script>

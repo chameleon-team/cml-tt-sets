@@ -1,3 +1,7 @@
+## [0.2.0]
+ - 修改cml-tt-ui-builtin目录结构
+## [0.1.0]
+ - 发布正式版
 ## [0.0.4-alpha1]
  - cml-tt-ui-builtin@0.0.4-alpha1对应 chameleon-ui-builtin@0.4.0版本，修复了page组件不对应的问题
  

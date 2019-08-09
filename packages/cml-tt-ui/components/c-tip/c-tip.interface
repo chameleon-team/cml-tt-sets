@@ -1,2 +1,1 @@
 <include src="cml-ui/components/c-tip/c-tip.interface"></include>
-<script cml-type="tt" src="./c-tip.cml"></script>

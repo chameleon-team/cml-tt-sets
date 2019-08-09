@@ -31,7 +31,7 @@ cml.config.merge({
     qq: true,
     tt:true,
   },
-  platforms: ['tt','wx'],
+  platforms: ['tt','wx','web'],
   buildInfo: {
     wxAppId: '123456'
   },

@@ -1,2 +1,1 @@
 <include src="cml-ui/components/c-tab-pane-item/c-tab-pane-item.interface"></include>
-<script cml-type="tt" src="./c-tab-pane-item.cml"></script>

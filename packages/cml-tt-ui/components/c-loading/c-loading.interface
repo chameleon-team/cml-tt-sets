@@ -1,2 +1,1 @@
 <include src="cml-ui/components/c-loading/c-loading.interface"></include>
-<script cml-type="tt" src="./c-loading.cml"></script>
