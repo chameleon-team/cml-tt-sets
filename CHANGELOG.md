@@ -1,3 +1,7 @@
+## [0.2.1]
+  - 基于0.2.1-alpha.0发布
+## [0.2.1-alpha.0]
+  - 测试cml-tt-ui和cml-tt-ui-builtin去掉interface中引入组件
 ## [0.2.0]
  - 修改cml-tt-ui-builtin目录结构
 ## [0.1.0]
