@@ -1,2 +1,1 @@
 <include src="chameleon-ui-builtin/components/checkbox/checkbox.interface"></include>
-<script cml-type="tt" src="./checkbox.tt.cml"></script>

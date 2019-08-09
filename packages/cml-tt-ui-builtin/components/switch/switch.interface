@@ -1,2 +1,1 @@
 <include src="chameleon-ui-builtin/components/switch/switch.interface"></include>
-<script cml-type="tt" src="./switch.tt.cml"></script>

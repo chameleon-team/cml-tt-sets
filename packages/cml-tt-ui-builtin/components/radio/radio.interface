@@ -1,3 +1,1 @@
 <include src="chameleon-ui-builtin/components/radio/radio.interface"></include>
-
-<script cml-type="tt" src="./radio.tt.cml"></script>
