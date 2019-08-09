@@ -8,9 +8,9 @@
   "email": "ChameleonCore@didiglobal.com",
   "main": "/components",
   "devDependencies": {
-    "chameleon-runtime": "^0.2.2",
+    "chameleon-runtime": "^0.3.2",
     "cml-tt-api": "0.2.1",
-    "cml-ui": "^0.3.0-alpha.1"
+    "cml-ui": "^0.3.1"
   },
   "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
 }

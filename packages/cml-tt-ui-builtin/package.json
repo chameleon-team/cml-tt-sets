@@ -9,8 +9,8 @@
   "license": "Apache",
   "main": "/components",
   "devDependencies": {
-    "chameleon-runtime": "^0.2.2",
-    "chameleon-ui-builtin": "^0.4.0-mvvm.3",
+    "chameleon-runtime": "^0.3.2",
+    "chameleon-ui-builtin": "^0.4.1",
     "cml-tt-api": "0.2.1"
   },
   "gitHead": "2cbd35033e8c9d89768ce1bce52320a097302a7f"
