@@ -35,20 +35,9 @@ clone 下来以上仓库之后，切换到 `master-tt` 分支，执行 cml tt de
 效果图如下
 
 <div style="display: flex;flex-direction: row;justify-content: space-around; align-items: flex-end;">
+  
   <div style="display: flex;flex-direction: column;align-items: center;">
-    <img src="./assets/mvvm/cml-tt-demo.png" width="200px" height="100%" />
-    <text style="color: #fda775;font-size: 24px;"></text>
-  </div>
-  <div style="display: flex;flex-direction: column;align-items: center;">
-    <img src="./assets/mvvm/cml-tt-flexbox.png" width="200px" height="100%"/>
-    <text style="color: #fda775;font-size: 24px;"></text>
-  </div>
-  <div style="display: flex;flex-direction: column;align-items: center;">
-    <img src="./assets/mvvm/cml-tt-yanxuan.png" width="200px" height="100%"/>
-    <text style="color: #fda775;font-size: 24px;"></text>
-  </div>
-  <div style="display: flex;flex-direction: column;align-items: center;">
-    <img src="./assets/mvvm/cml-tt-todomvc.png" width="200px" height="100%"/>
+    <img src="./assets/mvvm/merge-demo.png" width="200px" height="100%"/>
     <text style="color: #fda775;font-size: 24px;"></text>
   </div>
 </div>
