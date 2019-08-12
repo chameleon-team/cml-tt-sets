@@ -37,7 +37,7 @@ clone 下来以上仓库之后，切换到 `master-tt` 分支，执行 cml tt de
 <div style="display: flex;flex-direction: row;justify-content: space-around; align-items: flex-end;">
   
   <div style="display: flex;flex-direction: column;align-items: center;">
-    <img src="./assets/mvvm/merge-demo.png" width="200px" height="100%"/>
+    <img src="./assets/mvvm/merge-demo.png" width="600px" height="100%"/>
     <text style="color: #fda775;font-size: 24px;"></text>
   </div>
 </div>
