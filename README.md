@@ -8,7 +8,6 @@
 - 在`cml-tt-project`目录执行`cml tt dev`, 用字节跳动开发者工具打开`cml-tt-project/dist/tt`目录。
 
 ## 需要扩展仓库
-[![version](https://img.shields.io/npm/v/cml-tt-api.svg?style=flat)](https://www.npmjs.com/package/cml-tt-api)
 
 |包名|版本|描述|
 |-----|----|----|
