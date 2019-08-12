@@ -9,6 +9,8 @@
 
 ### 如何开发测试
 
+[![version](https://img.shields.io/npm/v/chameleon-tool.svg?style=flat)](https://www.npmjs.com/package/chameleon-runtime)
+
 fork该仓库，修改后提pull request。
 
 运行项目时执行了`lerna bootstrap`，`cml-tt-project`的node_modules下的依赖的开发npm包会符号链接到packages下的同名文件夹，所以直接在`packages`下开发，`cml-tt-project`即可生效。
