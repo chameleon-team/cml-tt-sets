@@ -1,14 +1,24 @@
-import {computed, action} from 'mobx'
+import { action } from 'mobx'
+
+import { defineGetterSetter } from './util'
 
 export function transformGetters(getters, module, store) {
   const newGetters = {}
   for (let key in getters) {
     if (key in store.getters) {
-      console.warn(new Error(`duplicate getter type: ${key}`))
+      console.warn('【chameleon-store ERROR】', new Error(`duplicate getter type: ${key}`))
     }
-    newGetters[key] = typeof getters[key] === 'function' ? computed(function() {
+
+    defineGetterSetter(newGetters, key, function () {
+      if (store.withThis) {
+        return getters[key].call({
+          state: module.state,
+          getters: module.getters,
+          rootState: store.state
+        })
+      }
       return getters[key](module.state, store.getters, store.state)
-    }) : getters[key]
+    })
   }
   return newGetters
 }

@@ -69,3 +69,24 @@ export function proxy(target, source, keys, mapKeys, readonly) {
   return target
 }
 
+export function defineGetterSetter (target, key, getValue, setValue, context) {
+  let get
+  let set
+  if (typeof getValue === 'function') {
+    get = context ? getValue.bind(context) : getValue
+  } else {
+    get = function () {
+      return getValue
+    }
+  }
+  if (typeof setValue === 'function') {
+    set = context ? setValue.bind(context) : setValue
+  }
+  let descriptor = {
+    get,
+    configurable: true,
+    enumerable: true
+  }
+  if (set) descriptor.set = set
+  Object.defineProperty(target, key, descriptor)
+}
