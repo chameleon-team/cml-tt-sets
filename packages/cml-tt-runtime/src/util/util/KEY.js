@@ -1,8 +1,8 @@
 import Config from './config'
 
 const KEY = {
-  tt: {
-    instance: tt,
+  computed: '_cmlComputed',
+  tt:{
     props: 'properties'
   }
 }

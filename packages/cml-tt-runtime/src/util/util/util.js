@@ -111,7 +111,7 @@ export function merge(to, from) {
   return to
 }
 
-export function extend(target, ...froms) {
+export function extend(target = {}, ...froms) {
   for (const from of froms) {
     if (type(from) === 'Object') {
       // for in 能遍历原型链上的属性
@@ -226,42 +226,6 @@ export function enumerableKeys(obj) {
     keys.push(key)
   }
   return keys
-}
-
-export function flatten(obj = {}) {
-
-  function check(str) {
-    if (!str) {
-      console.error('pathStr should not be null!')
-      return false
-    }
-    return true
-  }
-
-  function flattenRe(d, pathStr = '') {
-    if (type(d) === 'Array') {
-      check(pathStr)
-
-      d.forEach((item, i) => {
-        const path = `${pathStr}[${i}]`
-        flattenRe(item, path)
-      })
-    } else if (type(d) === 'Object') {
-      Object.keys(d).forEach(k => {
-        const v = d[k]
-        const path = pathStr ? `${pathStr}.${k}` : k
-        flattenRe(v, path)
-      })
-    } else {
-      check(pathStr)
-      ret[pathStr] = d
-    }
-  }
-
-  const ret = {}
-  flattenRe(obj)
-
-  return ret
 }
 
 
