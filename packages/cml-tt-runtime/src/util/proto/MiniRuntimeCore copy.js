@@ -1,9 +1,7 @@
 import {
   observable,
-  computed,
   reaction,
-  isObservableArray,
-  Reaction
+  isObservableArray
 } from 'mobx'
 
 import toJS from '../util/toJS'
@@ -19,8 +17,6 @@ import {
 
 import { type, isPlainObject } from '../util/type'
 
-import lifecycle from '../util/lifecycle'
-
 import KEY from '../util/KEY'
 
 import diff from '../util/diff'
@@ -34,6 +30,7 @@ import EventBus from '../util/EventBus'
 import { defineGetterSetter } from '../util/proto'
 
 const KEY_COMPUTED = KEY.get('computed')
+
 export default class MiniRuntimeCore {
   constructor(config) {
     this.platform = config.platform || ''
@@ -134,8 +131,6 @@ export default class MiniRuntimeCore {
     if (!this.context) return
     const context = this.context
     const self = this
-    // 渲染更新监听
-    // const disposer = autorunThrottle(context.$setData, name)
 
     /**
      * [computed description]
@@ -385,7 +380,7 @@ function forceUpdateFactory(context) {
  */
 function transformComputed(__cml_data__, context) {
   const options = context.__cml_originOptions__
-
+  
   const origComputed = extend(options[KEY_COMPUTED], context[KEY_COMPUTED] || {})
   const origComputedKeys = origComputed ? enumerableKeys(origComputed) : []
 
