@@ -1,3 +1,9 @@
+
+## [0.2.4-alpha.0/0.2.4]
+
+ - 更新runtime和store，适配mobx@4.8
+ - 更新scroller.tt.cml组件中deceleration的定义
+
 ## [0.2.3]
   - cml-tt-plugin模板解析部分增加可以配置 c-if c-else-if c-else c-for c-for-index c-for-item c-key 配置替换
 ## [0.2.2]
