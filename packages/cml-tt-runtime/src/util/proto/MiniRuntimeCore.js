@@ -1,7 +1,7 @@
 import {
   observable,
   reaction,
-  isObservableArray,
+  isObservableArray
 } from 'mobx'
 
 import toJS from '../util/toJS'

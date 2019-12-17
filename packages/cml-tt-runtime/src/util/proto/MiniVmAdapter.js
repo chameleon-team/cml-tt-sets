@@ -3,10 +3,12 @@ import BaseVmAdapter from './BaseVmAdapter'
 import { hasOwn, transferLifecycle, extend, extendWithIgnore, rename, enumerableKeys } from '../util/util'
 import { type } from '../util/type'
 import {mergeDefault, mergeHooks, mergeSimpleProps, mergeData, mergeWatch} from '../util/resolve'
-import { extras } from 'mobx'
+import { comparer } from 'mobx'
 import KEY from '../util/KEY'
 import lifecycle from '../util/lifecycle'
-import { mergeOptions } from '../util/options'
+import { deepClone } from '../util/clone'
+
+const KEY_COMPUTED = KEY.get('computed')
 
 // 各种小程序options transform 基类
 class MiniVmAdapter extends BaseVmAdapter {
@@ -46,10 +48,6 @@ class MiniVmAdapter extends BaseVmAdapter {
     this.needResolveAttrs && this.resolveAttrs()
     // 处理 props 添加监听
     this.needTransformProperties && this.transformProperties()
-
-    if (this.platform === 'alipay') {
-      delete this.options['computed']
-    }
   }
 
   /**
@@ -61,6 +59,8 @@ class MiniVmAdapter extends BaseVmAdapter {
    */
   initHooks(options) {
     if (!options.mixins) return
+    options.mixins = deepClone(options.mixins)
+
     const cmlHooks = lifecycle.get('cml.hooks')
     const mixins = options.mixins
 
@@ -89,6 +89,7 @@ class MiniVmAdapter extends BaseVmAdapter {
     this.needPropsHandler && this.handleProps(options)
     // 处理 生命周期映射
     transferLifecycle(options, this.hooksMap)
+    this.handleComputed(options)
   }
 
   /**
@@ -191,6 +192,12 @@ class MiniVmAdapter extends BaseVmAdapter {
     }
   }
 
+  handleComputed (options) {
+    options.computed = options.computed || {}
+    // handle computed to $cmlComputed
+    rename(options, 'computed', KEY_COMPUTED)
+  }
+
   initMixins (options) {
     if (!options.mixins) return
 
@@ -269,7 +276,7 @@ class MiniVmAdapter extends BaseVmAdapter {
     }
 
     let testProps = function (key) {
-      let regExp = new RegExp('computed|methods|proto|' + self.propsName)
+      let regExp = new RegExp(KEY_COMPUTED + '|methods|proto|' + self.propsName)
       return regExp.test(key)
     }  
   
@@ -357,7 +364,7 @@ class MiniVmAdapter extends BaseVmAdapter {
       }
       newFiled.observer = function(value, oldValue) {
         // 小程序内部数据使用了JSON.parse(JSON.stringify(x))的方式，导致每次引用都会变化
-        if (extras.deepEqual(value, oldValue)) return
+        if (comparer.structural(value, oldValue)) return
         this[key] = value
         typeof rawObserver === 'function' && rawObserver.call(this, value, oldValue)
       }
