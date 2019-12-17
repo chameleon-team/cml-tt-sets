@@ -1,9 +1,7 @@
 import {
   observable,
-  computed,
   reaction,
   isObservableArray,
-  Reaction
 } from 'mobx'
 
 import toJS from '../util/toJS'
@@ -18,8 +16,6 @@ import {
 } from '../util/util'
 
 import { type, isPlainObject } from '../util/type'
-
-import lifecycle from '../util/lifecycle'
 
 import KEY from '../util/KEY'
 
