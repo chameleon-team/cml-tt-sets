@@ -14,7 +14,7 @@ module.exports = {
     },
     parserOptions: {
       ecmaVersion: 2018,
-      parser:babel-eslint
+      parser:'babel-eslint'
     },
     rules: {
       'vue/comment-directive': 'off',
