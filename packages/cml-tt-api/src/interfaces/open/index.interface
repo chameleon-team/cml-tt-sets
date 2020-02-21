@@ -2,8 +2,16 @@
 
 <script cml-type="tt">
 
+import {
+  tryJsonParse,
+  getOpenObj,
+  buildQueryStringUrl,
+} from '../../lib/utils.js';
 class Method implements openPageInterface {
-  open() {
+
+  open(url, commonPatchParams, extraOptions) {
+    url = buildQueryStringUrl(commonPatchParams, url)    
+    tt.navigateToMiniProgram(getOpenObj(url).tt);
   }
 }
 

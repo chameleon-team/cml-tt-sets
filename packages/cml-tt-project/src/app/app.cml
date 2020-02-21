@@ -33,7 +33,7 @@ export default new App();
       "navigationBarTextStyle":"black"
     }
   },
-  "demo": {
+  "tt": {
     "window": {
       "backgroundTextStyle":"light",
       "navigationBarBackgroundColor": "#fff",

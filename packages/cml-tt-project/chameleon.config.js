@@ -33,6 +33,7 @@ cml.config.merge({
   },
   platforms: ['tt','wx','web'],
   buildInfo: {
+    ttAppId:'2423',
     wxAppId: '123456'
   },
   base: {
@@ -57,14 +58,15 @@ cml.config.merge({
       moduleIdType: 'name',
     },
     build: {
-      minimize: true
+      minimize: false
     }
   },
   wx: {
     dev: {
     },
     build: {
-      apiPrefix
+      apiPrefix,
+      minimize: false
     }
   },
   web: {
